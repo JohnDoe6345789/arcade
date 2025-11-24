@@ -2,6 +2,13 @@
 
 Use this log to keep a lightweight record of code review passes. Append new entries at the top so the latest review is easiest to find.
 
+## 2025-11-24 – Codex
+- PR/Branch: main (local audit)
+- Scope: Baseline module/catalog health and workflow playbooks; spot-check of bottom_panel_dowels metadata.
+- Tests: `python3 -m pytest` (fails: pytest capture FileNotFoundError before collection; 0 tests collected)
+- Verdict: changes requested
+- Follow-ups: Fix the pytest capture temp-file error in a clean venv so the suite can run; rerun the full suite (with focus on module coverage, including bottom_panel_dowels) once the harness is stable.
+
 ## 2025-11-24 – Codex (automated)
 - PR/Branch: custom/gitignore-setup (https://github.com/JohnDoe6345789/arcade/pull/17)
 - Scope: Added repository-wide `.gitignore` and authored branch/PR workflow playbook; covers Python/tooling caches, editor artifacts, and project-specific logs/venvs.

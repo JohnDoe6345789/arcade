@@ -35,7 +35,12 @@ if (-not (Get-Command gh -ErrorAction SilentlyContinue)) { exit 0 }
 
 $prNumber = gh pr list --head $branch --state open --json number 2>$null | ConvertFrom-Json | Select-Object -First 1 -ExpandProperty number
 if (-not $prNumber) {
-  $prNumber = gh pr create --head $branch --base main --title "Auto PR for $branch" --fill --json number --jq '.number' 2>$null
+  # gh pr create lacks --json on some versions; fall back to parsing the returned URL.
+  $createOutput = gh pr create --head $branch --base main --title "Auto PR for $branch" --fill 2>$null
+  if ($LASTEXITCODE -eq 0 -and $createOutput) {
+    $match = [regex]::Match($createOutput, "/pull/(\\d+)")
+    if ($match.Success) { $prNumber = $match.Groups[1].Value }
+  }
 }
 
 if ($prNumber) {
@@ -58,7 +63,7 @@ $diffSummary
 }
 
 if ($prNumber -and $autoMerge -eq 1) {
-  $mergeFlag = ""
+  $mergeFlag = "--merge"
   switch ($mergeMethod) {
     "merge" { $mergeFlag = "--merge" }
     "squash" { $mergeFlag = "--squash" }
