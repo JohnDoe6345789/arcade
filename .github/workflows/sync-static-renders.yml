@@ -1,0 +1,50 @@
+name: Sync renders to static branch
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-renders:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install render dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install cairosvg
+
+      - name: Render modules to SVG and PNG
+        run: python render_modules.py --out renders
+
+      - name: Detect changes
+        id: diff
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push to feature/static-files
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -B feature/static-files
+          git add renders
+          git commit -m "ci: sync renders from ${GITHUB_SHA}"
+          git push --force-with-lease origin feature/static-files
