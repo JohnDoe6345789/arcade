@@ -1,0 +1,11 @@
+.git
+.cache
+.pytest_cache
+.venv
+venv
+env
+node_modules
+.local
+cadquerywrapper/.venv
+__pycache__
+*.log
