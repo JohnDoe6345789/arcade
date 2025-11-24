@@ -27,6 +27,40 @@ def test_toc_entries_have_matching_modules():
         assert isinstance(module_data.get("children", []), list), "children must be present as a list"
 
 
+def test_toc_entries_use_descriptive_ids_and_labels():
+    toc = json.loads(TOC_PATH.read_text())
+    assert toc, "toc.json should list at least one module"
+
+    id_scores = []
+    lazy_ids = []
+    lazy_labels = []
+    suffix_pattern = re.compile(r"^[A-Za-z]+\\d+$")
+
+    for entry in toc:
+        ident = entry["id"]
+        assert isinstance(ident, str), f"toc id should be a string: {ident!r}"
+        normalized = ident.strip()
+        assert normalized, "toc ids must not be empty or whitespace"
+        assert any(ch.isalpha() for ch in normalized), f"toc ids must contain letters: {ident!r}"
+
+        id_scores.append(_expressiveness_score(normalized))
+        if suffix_pattern.fullmatch(normalized):
+            lazy_ids.append(normalized)
+
+        aria_label = entry.get("aria-label") or entry.get("ariaLabel")
+        assert isinstance(aria_label, str), f"aria-label required for toc id={ident}"
+        aria_normalized = aria_label.strip()
+        assert aria_normalized, f"aria-label must not be empty for toc id={ident}"
+        assert any(ch.isalpha() for ch in aria_normalized), f"aria-label should contain letters for toc id={ident}"
+        if suffix_pattern.fullmatch(aria_normalized):
+            lazy_labels.append((ident, aria_normalized))
+
+    assert id_scores, "No TOC ids discovered to score"
+    assert min(id_scores) >= 2.0, "TOC ids should be descriptive slugs, not generic exports"
+    assert not lazy_ids, f"Rename auto-generated TOC ids to descriptive slugs: {lazy_ids}"
+    assert not lazy_labels, f"Humanize TOC aria-label values: {lazy_labels}"
+
+
 def test_modules_provide_enriched_attributes():
     for module_path in MODULES_DIR.glob("*.json"):
         data = json.loads(module_path.read_text())
