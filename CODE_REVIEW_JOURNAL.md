@@ -2,6 +2,13 @@
 
 Use this log to keep a lightweight record of code review passes. Append new entries at the top so the latest review is easiest to find.
 
+## 2025-11-24 – Codex (automated)
+- PR/Branch: custom/gitignore-setup (https://github.com/JohnDoe6345789/arcade/pull/17)
+- Scope: Added repository-wide `.gitignore` and authored branch/PR workflow playbook; covers Python/tooling caches, editor artifacts, and project-specific logs/venvs.
+- Tests: `python3 -m pytest` (fails: FileNotFoundError during pytest capture teardown on this environment)
+- Verdict: approve
+- Follow-ups: Re-run pytest in a stable environment/venv once available; ensure capture teardown error is resolved before merging.
+
 ## How to add an entry
 - Record the date in ISO format (`YYYY-MM-DD`) and include your name or handle.
 - Note the branch or PR, a short scope summary (modules/files), and the overall verdict (`approve` | `changes requested`).
