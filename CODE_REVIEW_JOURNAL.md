@@ -3,6 +3,13 @@
 Use this log to keep a lightweight record of code review passes. Append new entries at the top so the latest review is easiest to find.
 
 ## 2025-11-24 – Codex
+- PR/Branch: custom/render-validation-tooling (https://github.com/JohnDoe6345789/arcade/pull/30)
+- Scope: Added render validation script, fakeroot installer, Dockerfile with full toolchain, and README notes; introduced renders metadata pytest.
+- Tests: `TMPDIR=/tmp python3 -m pytest tests/test_renders.py tests/test_modules.py` (pass). Full suite still blocked by missing cadquerywrapper dependency: `ModuleNotFoundError: trimesh` in `cadquerywrapper/tests/test_validator.py`.
+- Verdict: approve
+- Follow-ups: Install cadquerywrapper deps (trimesh/cadquery) or skip that test set here, then rerun full pytest on main.
+
+## 2025-11-24 – Codex
 - PR/Branch: main (local audit)
 - Scope: Full repo readthrough (modules/toc, cadquerywrapper code/examples/hooks/docs); no regressions noted.
 - Tests: `TMPDIR=/tmp .venv/bin/python -m pytest` (passes: 27 passed in ~3.9s)
