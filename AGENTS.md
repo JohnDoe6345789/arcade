@@ -22,6 +22,10 @@
 - Maintain geometric assertions for mechanical parts (hole spacing, cut-out sizes) and descriptive-id scoring for accessibility.
 - Ensure `toc.json` entries map one-to-one with files in `modules/` and that every node exposes non-empty ids containing letters.
 
+## Code Review Journal
+- Log every review in `CODE_REVIEW_JOURNAL.md` (newest entries first) using the template there.
+- Capture ISO date, reviewer, branch/PR link, scope summary, tests run or explicitly `not run`, verdict, and follow-ups with owners.
+
 ## Git Hook for Custom Branch PRs
 - GitHub auto-PR workflow is removed; rely on the local hook to open PRs for `custom/*` branches.
 - All pushes to branches matching `custom/*` must go through the local hook wrapper to auto-open a PR against `main`.
@@ -32,8 +36,10 @@
 - Use `git pushpr-lin` or `git pushpr-win` instead of `git push` for `custom/*`; bypassing this flow is not allowed.
 - Keep `gh` authenticated; the hook will no-op on non-`custom/*` branches so standard pushes still work elsewhere.
 - Optional auto-merge and branch cleanup: run the hook with `--auto-merge` (plus optional `--merge-method=merge|squash|rebase`) or set `PUSHPR_AUTO_MERGE=1` and `PUSHPR_MERGE_METHOD` to have it call `gh pr merge --auto --delete-branch` after creating/updating the PR.
+- When the diff looks good, rerun the push hook with `--auto-merge` (or set the env vars) so approved `custom/*` PRs merge and delete their branches automatically.
 - The hooks rely on `gh pr list` and `gh pr merge --auto`; `gh pr create` currently lacks `--json` output, so if the hook does not open a PR automatically, run `gh pr create --fill --title \"Auto PR for <branch>\"` yourself and then re-run the hook with `--auto-merge` (or call `gh pr merge --auto --delete-branch` manually).
 - After the hook (or manual fallback) opens the PR, review the diff immediately and merge if everything looks good so `custom/*` branches do not linger.
+- Verification: check the PR for the automated comment titled `Automated diff summary from push hook`; if it is missing, re-run the hook or add the file list as a manual comment.
 
 ## Commit & Pull Request Guidelines
 - Commits: concise imperative subject (`Add bezel window check`), reference the affected module(s), and group related JSON changes together.
