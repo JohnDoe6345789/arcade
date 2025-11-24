@@ -3,6 +3,13 @@
 Use this log to keep a lightweight record of code review passes. Append new entries at the top so the latest review is easiest to find.
 
 ## 2025-11-24 – Codex
+- PR/Branch: main (local audit)
+- Scope: Full repo readthrough (modules/toc, cadquerywrapper code/examples/hooks/docs); no regressions noted.
+- Tests: `TMPDIR=/tmp .venv/bin/python -m pytest` (passes: 27 passed in ~3.9s)
+- Verdict: approve
+- Follow-ups: None.
+
+## 2025-11-24 – Codex
 - PR/Branch: custom/doc-venv-clarity (local)
 - Scope: Documentation clarity updates to FEEDBACK_LOOP_PLAYBOOK (explicit venv activation + platform-specific pytest commands).
 - Tests: `TMPDIR=/tmp venv/bin/python -m pytest` (passes: 27 passed in ~2.8s)
