@@ -58,7 +58,10 @@ Automated diff summary from push hook:
 $diffSummary
 ```
 "@
-    gh pr comment $prNumber --body $commentBody 2>$null | Out-Null
+    $lastComment = gh pr view $prNumber --json comments --jq '.comments[-1].body' 2>$null
+    if ($lastComment -ne $commentBody) {
+      gh pr comment $prNumber --body $commentBody 2>$null | Out-Null
+    }
   }
 }
 
