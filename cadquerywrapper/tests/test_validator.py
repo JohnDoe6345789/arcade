@@ -1,11 +1,45 @@
+import math
 import sys
 import types
 from pathlib import Path
 
-import trimesh
-
 import pytest
-import math
+
+try:
+    import trimesh  # type: ignore
+except ModuleNotFoundError:
+    print(
+        "[hint] Missing dependency 'trimesh'. "
+        "Workaround: bash scripts/install_cadquerywrapper_deps.sh (or python -m pip install trimesh). "
+        "Using built-in stub so tests can proceed without trimesh.",
+        file=sys.stderr,
+    )
+    # Minimal stub so tests can run without the optional dependency installed.
+    _trimesh_stub = types.ModuleType("trimesh")
+    _export_registry: dict[str, int] = {}
+
+    class _StubMesh:
+        def __init__(self, face_count: int):
+            self.faces = [None] * face_count
+
+        def export(self, file_name: str | Path, *args, **kwargs) -> None:
+            path = Path(file_name)
+            _export_registry[str(path)] = len(self.faces)
+            path.touch()
+
+    def _icosphere(subdivisions: int) -> _StubMesh:
+        # Grow face count with subdivisions so triangle limit checks still trigger.
+        face_count = max(20, subdivisions * 200)
+        return _StubMesh(face_count)
+
+    def _load_mesh(file_name: str | Path) -> _StubMesh:
+        face_count = _export_registry.get(str(Path(file_name)), 0)
+        return _StubMesh(face_count)
+
+    _trimesh_stub.creation = types.SimpleNamespace(icosphere=_icosphere)
+    _trimesh_stub.load_mesh = _load_mesh
+    sys.modules["trimesh"] = _trimesh_stub
+    trimesh = _trimesh_stub  # type: ignore
 
 # Provide stub cadquery module before importing package modules
 _dummy_cq = types.ModuleType("cadquery")
