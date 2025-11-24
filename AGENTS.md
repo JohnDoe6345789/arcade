@@ -23,6 +23,7 @@
 - Ensure `toc.json` entries map one-to-one with files in `modules/` and that every node exposes non-empty ids containing letters.
 
 ## Git Hook for Custom Branch PRs
+- GitHub auto-PR workflow is removed; rely on the local hook to open PRs for `custom/*` branches.
 - All pushes to branches matching `custom/*` must go through the local hook wrapper to auto-open a PR against `main`.
 - Install `.git/hooks/push-pr.ps1` with executable bit and the following content:
   ```powershell
