@@ -29,7 +29,7 @@ Step-by-step flow to create branches, open PRs with the custom hook, handle revi
 ## 6) Merge and clean up
 - When ready, rerun the hook with auto-merge enabled (`git pushpr-lin --auto-merge` or `git pushpr-win --auto-merge`) or set env vars (`PUSHPR_AUTO_MERGE=1`, optional `PUSHPR_MERGE_METHOD`).
 - Confirm `gh pr merge --auto --delete-branch` succeeded; if not, merge manually and delete the branch on GitHub.
-- Locally: `git switch main && git pull && git branch -d custom/<topic>`.
+- Locally: `git switch main && git pull && git branch -d custom/<topic>`. If new changes landed during review, rerun pytest (WSL: `TMPDIR=/tmp`) to ensure main stays green.
 
 ## Quick checklist
 - [ ] On `custom/<topic>` branch, up to date with `main`.
