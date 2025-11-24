@@ -55,3 +55,4 @@ Thumbs.db
 # Project-specific
 cadquerywrapper.log
 cadquerywrapper/.venv/
+.local/
