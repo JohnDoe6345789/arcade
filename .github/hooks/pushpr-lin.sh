@@ -36,7 +36,9 @@ git push "${remote}" "${branch}"
 if command -v gh >/dev/null 2>&1; then
   pr_number="$(gh pr list --head "${branch}" --state open --json number --jq '.[0].number' 2>/dev/null || true)"
   if [[ -z "${pr_number}" ]]; then
-    pr_number="$(gh pr create --head "${branch}" --base main --title "Auto PR for ${branch}" --fill --json number --jq '.number' 2>/dev/null || true)"
+    # gh pr create currently lacks --json support on some versions; fall back to parsing the URL.
+    create_output="$(gh pr create --head "${branch}" --base main --title "Auto PR for ${branch}" --fill 2>/dev/null || true)"
+    pr_number="$(printf '%s\n' "${create_output}" | grep -oE '/pull/[0-9]+' | tail -n1 | grep -oE '[0-9]+')"
   fi
 
   if [[ -n "${pr_number}" ]]; then
