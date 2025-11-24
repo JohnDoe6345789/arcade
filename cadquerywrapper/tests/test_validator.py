@@ -169,7 +169,7 @@ from cadquerywrapper.save_validator import SaveValidator, ValidationError  # noq
 from cadquerywrapper.project import CadQueryWrapper  # noqa: E402
 
 
-RULES_PATH = Path("cadquerywrapper/rules/bambu_printability_rules.json")
+RULES_PATH = Path(__file__).resolve().parents[1] / "cadquerywrapper" / "rules" / "bambu_printability_rules.json"
 
 
 def test_load_rules():
