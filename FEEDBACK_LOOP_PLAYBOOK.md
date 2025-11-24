@@ -3,7 +3,7 @@
 Use this loop to keep the project reviewed, documented, and shipped without drift.
 
 ## Step 1) Code review the project (exit when clean)
-- Review the current branch/PR and scan the whole project (modules/toc, code, scripts, tests) for metadata, geometry, or logic regressions. Anchor on best practices: understand intent, check correctness and edge cases, keep comments/ids clear, prefer small focused diffs, leave actionable concise feedback, and watch code coverage/critical paths when new logic lands.
+- Review the current branch/PR and scan the whole project (modules/toc, code, scripts, tests) for metadata, geometry, or logic regressions. Read the actual code and JSON content (not just diffs) to understand intent, catch context loss, and spot silent regressions. Anchor on best practices: understand intent, check correctness and edge cases, keep comments/ids clear, prefer small focused diffs, leave actionable concise feedback, and watch code coverage/critical paths when new logic lands.
 - Run validation (prefer `python3 -m pytest` from a clean venv; on WSL set `TMPDIR=/tmp` to avoid capture temp-file issues) and capture any failures.
 - Log the outcome in `CODE_REVIEW_JOURNAL.md` with verdict, tests, and follow-ups.
 - If the review raises no issues and tests are green, exit the loop until new changes arrive.

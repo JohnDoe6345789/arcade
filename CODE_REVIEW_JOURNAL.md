@@ -3,6 +3,20 @@
 Use this log to keep a lightweight record of code review passes. Append new entries at the top so the latest review is easiest to find.
 
 ## 2025-11-24 – Codex
+- PR/Branch: custom/feedback-playbook-read-code (https://github.com/JohnDoe6345789/arcade/pull/25)
+- Scope: Feedback loop playbook tweak to explicitly require reading existing code/JSON during review; doc-only.
+- Tests: `TMPDIR=/tmp venv/bin/python -m pytest` (passes: 27 passed in ~2.6s)
+- Verdict: approve
+- Follow-ups: None.
+
+## 2025-11-24 – Codex
+- PR/Branch: main (local audit)
+- Scope: Feedback loop pass; no new module/toc/code changes observed since last review.
+- Tests: `TMPDIR=/tmp venv/bin/python -m pytest` (passes: 27 passed in ~2.6s)
+- Verdict: approve
+- Follow-ups: None.
+
+## 2025-11-24 – Codex
 - PR/Branch: main (local audit)
 - Scope: Feedback loop pass; FEEDBACK_LOOP_PLAYBOOK wording refreshed to remove hesitation; no new module/toc changes spotted.
 - Tests: `TMPDIR=/tmp venv/bin/python -m pytest` (passes: 27 passed in ~2.7s)
