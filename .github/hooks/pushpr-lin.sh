@@ -39,6 +39,14 @@ if command -v gh >/dev/null 2>&1; then
     pr_number="$(gh pr create --head "${branch}" --base main --title "Auto PR for ${branch}" --fill --json number --jq '.number' 2>/dev/null || true)"
   fi
 
+  if [[ -n "${pr_number}" ]]; then
+    diff_summary="$(gh pr diff "${pr_number}" --stat 2>/dev/null || true)"
+    if [[ -n "${diff_summary}" ]]; then
+      comment_body="$(printf 'Automated diff summary from push hook:\n```\n%s\n```\n' "${diff_summary}")"
+      gh pr comment "${pr_number}" --body "${comment_body}" 2>/dev/null || true
+    fi
+  fi
+
   if [[ -n "${pr_number}" && "${auto_merge}" -eq 1 ]]; then
     merge_flag=""
     case "${merge_method}" in
