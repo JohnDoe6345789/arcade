@@ -22,6 +22,28 @@
 - Maintain geometric assertions for mechanical parts (hole spacing, cut-out sizes) and descriptive-id scoring for accessibility.
 - Ensure `toc.json` entries map one-to-one with files in `modules/` and that every node exposes non-empty ids containing letters.
 
+## Git Hook for Custom Branch PRs
+- All pushes to branches matching `custom/*` must go through the local hook wrapper to auto-open a PR against `main`.
+- Install `.git/hooks/push-pr.ps1` with executable bit and the following content:
+  ```powershell
+  #!/usr/bin/env pwsh
+  $remote = if ($args.Length -ge 1) { $args[0] } else { "origin" }
+  $branch = git rev-parse --abbrev-ref HEAD
+  if ($branch -notlike "custom/*") { exit 0 }
+
+  git push $remote $branch
+  if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+  $existing = gh pr list --head $branch --state open --json number 2>$null | ConvertFrom-Json
+  if ($existing.Count -gt 0) { exit 0 }
+
+  gh pr create --head $branch --base main --title "Auto PR for $branch" --fill
+  ```
+- The script is checked in at `.github/hooks/push-pr.ps1`; copy it into `.git/hooks/push-pr.ps1` locally.
+- Add the alias: `git config alias.pushpr '!powershell -ExecutionPolicy Bypass -File .git/hooks/push-pr.ps1'` (swap `powershell` for `pwsh` if you prefer Core).
+- Use `git pushpr` instead of `git push` for `custom/*`; bypassing this flow is not allowed.
+- Keep `gh` authenticated; the hook will no-op on non-`custom/*` branches so standard pushes still work elsewhere.
+
 ## Commit & Pull Request Guidelines
 - Commits: concise imperative subject (`Add bezel window check`), reference the affected module(s), and group related JSON changes together.
 - Pull requests: summarize scope, list touched module ids, note any new geometric assumptions, and include `pytest` results.
