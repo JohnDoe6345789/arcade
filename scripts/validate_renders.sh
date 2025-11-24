@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Validate rendered SVG and PNG outputs for the arcade cabinet.
+# Validate rendered SVG, PNG, and JPEG outputs for the arcade cabinet.
 # Runs xmllint + optional svglint/svgo on SVGs, pngcheck on PNGs,
 # and can regenerate PNGs for parity checking when VALIDATE_PARITY=1.
 
@@ -29,6 +29,7 @@ maybe_cmd() {
 shopt -s nullglob
 SVGS=(renders/*.svg)
 PNGS=(renders/*.png)
+JPGS=(renders/*.jpg)
 
 if (( ${#SVGS[@]} == 0 )); then
   echo "No SVG files found in renders/; generate them first." >&2
@@ -38,13 +39,28 @@ if (( ${#PNGS[@]} == 0 )); then
   echo "No PNG files found in renders/; generate them first." >&2
   exit 1
 fi
+if (( ${#JPGS[@]} == 0 )); then
+  echo "No JPEG files found in renders/; generate them first." >&2
+  exit 1
+fi
 
-echo "Checking SVG/PNG pairs..."
+echo "Checking SVG/PNG/JPEG pairs..."
 missing_pairs=0
 for svg in "${SVGS[@]}"; do
   base="${svg%.svg}"
   if [[ ! -f "${base}.png" ]]; then
     echo "Missing PNG for ${svg}" >&2
+    missing_pairs=1
+  fi
+  if [[ ! -f "${base}.jpg" ]]; then
+    echo "Missing JPEG for ${svg}" >&2
+    missing_pairs=1
+  fi
+done
+for jpg in "${JPGS[@]}"; do
+  base="${jpg%.jpg}"
+  if [[ ! -f "${base}.svg" ]]; then
+    echo "Missing SVG for ${jpg}" >&2
     missing_pairs=1
   fi
 done
@@ -86,6 +102,8 @@ done
 if maybe_cmd identify; then
   echo "Sample PNG dimensions (first five):"
   identify -format '%f: %wx%h\n' "${PNGS[@]}" | head -n 5
+  echo "Sample JPEG dimensions (first five):"
+  identify -format '%f: %wx%h\n' "${JPGS[@]}" | head -n 5
 else
   echo "identify not found; skipping dimension summary."
 fi

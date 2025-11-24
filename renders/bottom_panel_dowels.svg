@@ -3,7 +3,9 @@
   <style>.panel { fill:none; stroke:black; stroke-width:1; }
     .label { font-family:Arial; font-size:16px; }
     .dim { font-family:Arial; font-size:14px; font-style:italic; }
-    .title { font-family:Arial; font-size:22px; font-weight:bold; }</style>
+    .title { font-family:Arial; font-size:22px; font-weight:bold; }
+.label, .dim, .title { fill: #111; stroke: none; }
+</style>
   <g id="bottom_panel_dowels" transform="translate(20,500)" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="panel" role="bottom_panel_dowels" shapeType="g" aria-label="bottom panel dowels" ariaLabel="bottom panel dowels" tabindex="-1">
     <rect class="panel" x="0" y="0" width="620" height="540" rx="5" ry="5" id="bottom_panel_outline" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="panel" role="bottom_panel_outline" shapeType="rect" aria-label="bottom_panel_outline" ariaLabel="bottom_panel_outline" tabindex="-1" />
     <text x="10" y="20" class="label" id="bottom_panel_label" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="panel" role="bottom_panel_label" shapeType="text" aria-label="bottom_panel_label" ariaLabel="bottom_panel_label" tabindex="-1">Bottom Panel with Chungus Dowels</text>
