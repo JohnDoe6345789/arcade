@@ -22,6 +22,10 @@
 - Maintain geometric assertions for mechanical parts (hole spacing, cut-out sizes) and descriptive-id scoring for accessibility.
 - Ensure `toc.json` entries map one-to-one with files in `modules/` and that every node exposes non-empty ids containing letters.
 
+## Code Review Journal
+- Log every review in `CODE_REVIEW_JOURNAL.md` (newest entries first) using the template there.
+- Capture ISO date, reviewer, branch/PR link, scope summary, tests run or explicitly `not run`, verdict, and follow-ups with owners.
+
 ## Git Hook for Custom Branch PRs
 - GitHub auto-PR workflow is removed; rely on the local hook to open PRs for `custom/*` branches.
 - All pushes to branches matching `custom/*` must go through the local hook wrapper to auto-open a PR against `main`.
