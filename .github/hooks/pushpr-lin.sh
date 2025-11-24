@@ -45,7 +45,10 @@ if command -v gh >/dev/null 2>&1; then
     diff_summary="$(gh pr diff "${pr_number}" --name-only 2>/dev/null || true)"
     if [[ -n "${diff_summary}" ]]; then
       comment_body="$(printf 'Automated diff summary from push hook:\n```\n%s\n```\n' "${diff_summary}")"
-      gh pr comment "${pr_number}" --body "${comment_body}" 2>/dev/null || true
+      last_comment="$(gh pr view "${pr_number}" --json comments --jq '.comments[-1].body' 2>/dev/null || true)"
+      if [[ "${last_comment}" != "${comment_body}" ]]; then
+        gh pr comment "${pr_number}" --body "${comment_body}" 2>/dev/null || true
+      fi
     fi
   fi
 
