@@ -3,6 +3,13 @@
 Use this log to keep a lightweight record of code review passes. Append new entries at the top so the latest review is easiest to find.
 
 ## 2025-11-24 – Codex
+- PR/Branch: main (local audit)
+- Scope: Feedback loop pass; suite blocked during cadquerywrapper test collection due to missing trimesh; no new module/toc changes spotted.
+- Tests: `TMPDIR=/tmp python3 -m pytest` (fails: ModuleNotFoundError for trimesh when collecting cadquerywrapper/tests/test_validator.py)
+- Verdict: changes requested
+- Follow-ups: Install cadquerywrapper deps (trimesh/cadquery) or skip those tests in this env, then rerun full pytest for toc/module coverage.
+
+## 2025-11-24 – Codex
 - PR/Branch: custom/feedback-playbook-read-code (https://github.com/JohnDoe6345789/arcade/pull/25)
 - Scope: Feedback loop playbook tweak to explicitly require reading existing code/JSON during review; doc-only.
 - Tests: `TMPDIR=/tmp venv/bin/python -m pytest` (passes: 27 passed in ~2.6s)
