@@ -223,7 +223,13 @@ def render_module(module_data: dict, output_dir: Path, style_text: str, emit_png
             png_path = output_dir / f"{module_id}.png"
             cairosvg.svg2png(url=str(svg_path), write_to=str(png_path))
         except ImportError:
-            print(f"[warn] cairosvg not installed; skipping PNG for {module_id}")
+            from cadquerywrapper.import_advice import print_import_advice
+
+            print_import_advice(
+                "cairosvg",
+                "python -m pip install cairosvg (or pip install --user cairosvg); rerun with --no-png to skip raster output.",
+                f"PNG rendering for {module_id} is optional.",
+            )
         except Exception as exc:  # pragma: no cover - conversion errors depend on runtime env
             print(f"[warn] Failed to render PNG for {module_id}: {exc}")
             png_path = None

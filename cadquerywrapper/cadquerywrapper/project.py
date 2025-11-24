@@ -3,7 +3,17 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-import cadquery as cq
+from .import_advice import print_import_advice
+
+try:
+    import cadquery as cq
+except ModuleNotFoundError as exc:  # pragma: no cover - exercised in environments missing cadquery
+    print_import_advice(
+        "cadquery",
+        "bash scripts/install_cadquerywrapper_deps.sh (or python -m pip install cadquery)",
+        "CadQueryWrapper needs cadquery to wrap workplanes.",
+    )
+    raise
 
 from .save_validator import SaveValidator
 from .validator import Validator

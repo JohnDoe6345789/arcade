@@ -3,8 +3,27 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-import cadquery as cq
-import trimesh
+from .import_advice import print_import_advice
+
+try:
+    import cadquery as cq
+except ModuleNotFoundError as exc:  # pragma: no cover - exercised in environments missing cadquery
+    print_import_advice(
+        "cadquery",
+        "bash scripts/install_cadquerywrapper_deps.sh (or python -m pip install cadquery)",
+        "CadQueryWrapper validation needs cadquery.",
+    )
+    raise
+
+try:
+    import trimesh
+except ModuleNotFoundError as exc:  # pragma: no cover - exercised in environments missing trimesh
+    print_import_advice(
+        "trimesh",
+        "bash scripts/install_cadquerywrapper_deps.sh (or python -m pip install trimesh)",
+        "Triangle-count checks need trimesh.",
+    )
+    raise
 
 from .validator import (
     ValidationError,

@@ -1,4 +1,14 @@
-import cadquery as cq
+try:
+    import cadquery as cq
+except ModuleNotFoundError as exc:
+    from cadquerywrapper.import_advice import print_import_advice
+
+    print_import_advice(
+        "cadquery",
+        "bash scripts/install_cadquerywrapper_deps.sh (or python -m pip install cadquery)",
+        "CadQuery is required to run this example.",
+    )
+    raise
 from cadquerywrapper import CadQueryWrapper
 
 # These can be modified rather than hardcoding values for each dimension.

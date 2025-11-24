@@ -63,6 +63,17 @@ bash scripts/validate_renders.sh          # runs xmllint/pngcheck + pytest
 VALIDATE_PARITY=1 bash scripts/validate_renders.sh  # also re-renders PNGs and compares against committed PNGs
 ```
 
+## Install cadquerywrapper deps without sudo
+Set up the cadquerywrapper runtime (cadquery + trimesh) rootlessly:
+
+```bash
+# create/activate a local venv (recommended). If .venv fails on your platform, retry with "python3 -m venv venv && source venv/bin/activate".
+python3 -m venv .venv && source .venv/bin/activate
+
+bash scripts/install_cadquerywrapper_deps.sh                # installs into .venv (creates if missing)
+USE_VENV=0 USE_USER=1 bash scripts/install_cadquerywrapper_deps.sh  # reuse system python with pip --user
+```
+
 ## Dockerized tooling
 Image with all render/validation dependencies (Python, cairosvg, pytest, ImageMagick, Inkscape, pngcheck, svgo/svglint via Node 20):
 
