@@ -38,6 +38,25 @@ if (-not $prNumber) {
   $prNumber = gh pr create --head $branch --base main --title "Auto PR for $branch" --fill --json number --jq '.number' 2>$null
 }
 
+if ($prNumber) {
+  $diffSummary = ""
+  try {
+    $diffSummary = gh pr diff $prNumber --stat 2>$null
+  } catch {
+    $diffSummary = ""
+  }
+
+  if (-not [string]::IsNullOrWhiteSpace($diffSummary)) {
+    $commentBody = @"
+Automated diff summary from push hook:
+```
+$diffSummary
+```
+"@
+    gh pr comment $prNumber --body $commentBody 2>$null | Out-Null
+  }
+}
+
 if ($prNumber -and $autoMerge -eq 1) {
   $mergeFlag = ""
   switch ($mergeMethod) {
