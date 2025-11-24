@@ -31,6 +31,7 @@
   - Windows: `git config alias.pushpr-win '!powershell -ExecutionPolicy Bypass -File .git/hooks/pushpr-win.ps1'`
 - Use `git pushpr-lin` or `git pushpr-win` instead of `git push` for `custom/*`; bypassing this flow is not allowed.
 - Keep `gh` authenticated; the hook will no-op on non-`custom/*` branches so standard pushes still work elsewhere.
+- Optional auto-merge and branch cleanup: run the hook with `--auto-merge` (plus optional `--merge-method=merge|squash|rebase`) or set `PUSHPR_AUTO_MERGE=1` and `PUSHPR_MERGE_METHOD` to have it call `gh pr merge --auto --delete-branch` after creating/updating the PR.
 
 ## Commit & Pull Request Guidelines
 - Commits: concise imperative subject (`Add bezel window check`), reference the affected module(s), and group related JSON changes together.
