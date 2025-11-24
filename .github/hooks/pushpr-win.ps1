@@ -41,7 +41,7 @@ if (-not $prNumber) {
 if ($prNumber) {
   $diffSummary = ""
   try {
-    $diffSummary = gh pr diff $prNumber --stat 2>$null
+    $diffSummary = gh pr diff $prNumber --name-only 2>$null
   } catch {
     $diffSummary = ""
   }

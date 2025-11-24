@@ -40,7 +40,7 @@ if command -v gh >/dev/null 2>&1; then
   fi
 
   if [[ -n "${pr_number}" ]]; then
-    diff_summary="$(gh pr diff "${pr_number}" --stat 2>/dev/null || true)"
+    diff_summary="$(gh pr diff "${pr_number}" --name-only 2>/dev/null || true)"
     if [[ -n "${diff_summary}" ]]; then
       comment_body="$(printf 'Automated diff summary from push hook:\n```\n%s\n```\n' "${diff_summary}")"
       gh pr comment "${pr_number}" --body "${comment_body}" 2>/dev/null || true
