@@ -14,16 +14,26 @@ def _png_paths():
     return sorted(RENDERS_DIR.glob("*.png"))
 
 
-def test_renders_have_svg_and_png_pairs():
+def _jpg_paths():
+    return sorted(RENDERS_DIR.glob("*.jpg"))
+
+
+def test_renders_have_svg_png_jpg_pairs():
     svgs = {path.stem for path in _svg_paths()}
     pngs = {path.stem for path in _png_paths()}
+    jpgs = {path.stem for path in _jpg_paths()}
 
     assert svgs, "renders/ should contain at least one SVG render"
     assert pngs, "renders/ should contain at least one PNG render"
+    assert jpgs, "renders/ should contain at least one JPEG render"
 
     missing_png = svgs - pngs
     extra_png = pngs - svgs
+    missing_jpg = svgs - jpgs
+    extra_jpg = jpgs - svgs
+
     assert not missing_png and not extra_png, f"SVG/PNG pairs must match (missing PNG: {sorted(missing_png)}, extra PNG: {sorted(extra_png)})"
+    assert not missing_jpg and not extra_jpg, f"SVG/JPEG pairs must match (missing JPEG: {sorted(missing_jpg)}, extra JPEG: {sorted(extra_jpg)})"
 
 
 def test_svg_roots_expose_units_and_viewbox():

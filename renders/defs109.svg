@@ -3,6 +3,8 @@
   <style>.panel { fill:none; stroke:black; stroke-width:1; }
     .label { font-family:Arial; font-size:16px; }
     .dim { font-family:Arial; font-size:14px; font-style:italic; }
-    .title { font-family:Arial; font-size:22px; font-weight:bold; }</style>
+    .title { font-family:Arial; font-size:22px; font-weight:bold; }
+.label, .dim, .title { fill: #111; stroke: none; }
+</style>
   <defs id="defs109" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="defs" role="defs109" shapeType="defs" aria-label="defs109" ariaLabel="defs109" tabindex="-1" />
 </svg>

@@ -5,7 +5,7 @@ This repository captures a bartop arcade cabinet sized for an off-the-shelf 22�
 ## Repository layout
 - `modules/` – JSON snapshots of individual SVG nodes (panels, isometric views, annotations, and hardware cut-outs such as the PSU and VESA plates).
 - `toc.json` – a table of contents that lists every module with its role, category, and accessible label for quick lookup.
-- `renders/` – auto-generated SVG and PNG exports of each module for quick visual inspection (built by `render_modules.py`).
+- `renders/` – auto-generated SVG, PNG, and JPG exports of each module for quick visual inspection (built by `render_modules.py`).
 
 ## JSON module structure
 Every module follows the same shape:
@@ -23,17 +23,18 @@ jq '{tag, id, attrib: .attrib | {class, transform}}' modules/assembly_instructio
 - Render or validate the geometry by walking the module tree and emitting standard SVG.
 - Filter modules by role or category using the metadata in `toc.json` (for example, all `diagram` entries for isometric views).
 
-## Render modules to SVG and PNG
-Use the included helper to emit a folder of design files that you can hand to CAM tools or a print shop. PNGs are emitted alongside the SVGs when `cairosvg` is available.
+## Render modules to SVG, PNG, and JPG
+Use the included helper to emit a folder of design files that you can hand to CAM tools or a print shop. PNGs and JPGs are emitted alongside the SVGs when `cairosvg` (PNG) and Pillow (JPG) are available.
 
 ```bash
 source .venv/bin/activate            # or any Python environment with cairosvg installed
-python -m pip install cairosvg       # one-time dependency for PNG exports
+python -m pip install cairosvg pillow  # one-time dependencies for PNG/JPG exports
 python render_modules.py --out renders
 ```
 
 Flags:
 - `--no-png` skips rasterizing to PNG if you only want SVGs.
+- `--no-jpg` skips rasterizing to JPG if you only want SVGs/PNGs.
 - `--module <id>` limits rendering to specific module ids (repeatable).
 - `--style-module <id>` injects a different `modules/<id>.json` style block if you add one.
 
@@ -44,7 +45,7 @@ WSL/Ubuntu helper to install the CLI utilities used for validating and re-render
 bash scripts/install_render_tools.sh
 ```
 
-Installs apt packages (pngcheck, ImageMagick, xmllint, Inkscape), npm tools (svgo, svglint when npm is present), and `cairosvg` via pip (prefers `.venv/bin/python` if available). Set `SKIP_APT_UPDATE=1` to skip `apt-get update`, or `PY_BIN` to point at a different Python interpreter.
+Installs apt packages (pngcheck, ImageMagick, xmllint, Inkscape), npm tools (svgo, svglint when npm is present), and `cairosvg`/`pillow` via pip (prefers `.venv/bin/python` if available). Set `SKIP_APT_UPDATE=1` to skip `apt-get update`, or `PY_BIN` to point at a different Python interpreter.
 
 Fakeroot/no-sudo install (keeps apt caches under `.cache/fakeroot-apt` and extracts into your chosen prefix):
 
@@ -56,7 +57,7 @@ export LD_LIBRARY_PATH="$PWD/.local/fakeroot/usr/lib/x86_64-linux-gnu:$PWD/.loca
 
 Set `INSTALL_INKSCAPE=1` if you want Inkscape included in the fakeroot bundle (larger download). Use `NPM_PREFIX` to override where local npm packages land when `FAKEROOT` is set.
 
-Validate the generated renders (SVG/PNG) with the lint helpers and pytest checks:
+Validate the generated renders (SVG/PNG/JPG) with the lint helpers and pytest checks:
 
 ```bash
 bash scripts/validate_renders.sh          # runs xmllint/pngcheck + pytest

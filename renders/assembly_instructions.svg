@@ -3,7 +3,9 @@
   <style>.panel { fill:none; stroke:black; stroke-width:1; }
     .label { font-family:Arial; font-size:16px; }
     .dim { font-family:Arial; font-size:14px; font-style:italic; }
-    .title { font-family:Arial; font-size:22px; font-weight:bold; }</style>
+    .title { font-family:Arial; font-size:22px; font-weight:bold; }
+.label, .dim, .title { fill: #111; stroke: none; }
+</style>
   <g id="assembly_instructions" transform="translate(900,100)" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="annotation" role="assembly_instructions" shapeType="g" aria-label="assembly instructions" ariaLabel="assembly instructions" tabindex="-1">
     <text x="0" y="0" class="title" id="assembly_instructions_title" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="annotation" role="assembly_instructions_title" shapeType="text" aria-label="assembly_instructions_title" ariaLabel="assembly_instructions_title" tabindex="-1">Assembly Instructions</text>
     <text x="0" y="40" class="label" id="assembly_step_1_insert_dowels" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="annotation" role="assembly_step_1_insert_dowels" shapeType="text" aria-label="assembly_step_1_insert_dowels" ariaLabel="assembly_step_1_insert_dowels" tabindex="-1">1. Insert 10 mm bottom-panel dowels into motherboard tray sockets.</text>

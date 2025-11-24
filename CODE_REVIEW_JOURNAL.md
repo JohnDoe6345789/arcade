@@ -2,6 +2,13 @@
 
 Use this log to keep a lightweight record of code review passes. Append new entries at the top so the latest review is easiest to find.
 
+## 2025-11-25 – Codex
+- PR/Branch: custom/import-advice-hints (https://github.com/JohnDoe6345789/arcade/pull/33)
+- Scope: Added JPEG renders alongside SVG/PNG, enforced dark text fallback in styles, expanded validation/tests/docs, and refreshed rendered assets.
+- Tests: `TMPDIR=/tmp PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 venv/bin/python -m pytest -s` (pass)
+- Verdict: approve
+- Follow-ups: Merge via push hook once reviewed; ensure diff summary comment present.
+
 ## 2025-11-24 – Codex
 - PR/Branch: custom/import-advice-hints (https://github.com/JohnDoe6345789/arcade/pull/32)
 - Scope: Added shared import advice helper + rootless cadquerywrapper installer; wired hints across cadquerywrapper modules/examples and render script; docs updated for venv guidance.

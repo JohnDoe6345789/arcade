@@ -3,7 +3,9 @@
   <style>.panel { fill:none; stroke:black; stroke-width:1; }
     .label { font-family:Arial; font-size:16px; }
     .dim { font-family:Arial; font-size:14px; font-style:italic; }
-    .title { font-family:Arial; font-size:22px; font-weight:bold; }</style>
+    .title { font-family:Arial; font-size:22px; font-weight:bold; }
+.label, .dim, .title { fill: #111; stroke: none; }
+</style>
   <g id="motherboard_tray" transform="translate(20,100)" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="panel" role="motherboard_tray" shapeType="g" aria-label="motherboard tray" ariaLabel="motherboard tray" tabindex="-1">
     <rect class="panel" x="0" y="0" width="405" height="344" rx="5" ry="5" id="motherboard_tray_outline" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="panel" role="motherboard_tray_outline" shapeType="rect" aria-label="motherboard_tray_outline" ariaLabel="motherboard_tray_outline" tabindex="-1" />
     <text x="10" y="20" class="label" id="motherboard_tray_label" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="panel" role="motherboard_tray_label" shapeType="text" aria-label="motherboard_tray_label" ariaLabel="motherboard_tray_label" tabindex="-1">Motherboard Tray (405 mm × 344 mm)</text>

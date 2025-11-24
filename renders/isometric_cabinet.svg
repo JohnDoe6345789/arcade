@@ -3,7 +3,9 @@
   <style>.panel { fill:none; stroke:black; stroke-width:1; }
     .label { font-family:Arial; font-size:16px; }
     .dim { font-family:Arial; font-size:14px; font-style:italic; }
-    .title { font-family:Arial; font-size:22px; font-weight:bold; }</style>
+    .title { font-family:Arial; font-size:22px; font-weight:bold; }
+.label, .dim, .title { fill: #111; stroke: none; }
+</style>
   <g id="isometric_cabinet" transform="translate(900,500)" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="isometric_cabinet" shapeType="g" aria-label="isometric cabinet" ariaLabel="isometric cabinet" tabindex="-1">
     <text x="0" y="0" class="title" id="text41" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="text41" shapeType="text" aria-label="text41" ariaLabel="text41" tabindex="-1">Isometric View (Simplified Line Art)</text>
     <polygon class="panel" points="200,0 350,80 150,130 0,50 " id="polygon41" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="polygon41" shapeType="polygon" aria-label="polygon41" ariaLabel="polygon41" tabindex="-1" />

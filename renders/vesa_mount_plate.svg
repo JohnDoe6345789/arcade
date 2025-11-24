@@ -3,7 +3,9 @@
   <style>.panel { fill:none; stroke:black; stroke-width:1; }
     .label { font-family:Arial; font-size:16px; }
     .dim { font-family:Arial; font-size:14px; font-style:italic; }
-    .title { font-family:Arial; font-size:22px; font-weight:bold; }</style>
+    .title { font-family:Arial; font-size:22px; font-weight:bold; }
+.label, .dim, .title { fill: #111; stroke: none; }
+</style>
   <g id="vesa_mount_plate" transform="translate(700,1350)" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="mount" role="vesa_mount_plate" shapeType="g" aria-label="vesa mount plate" ariaLabel="vesa mount plate" tabindex="-1">
     <rect class="panel" x="0" y="0" width="300" height="300" rx="5" ry="5" id="vesa_plate_outline" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="mount" role="vesa_plate_outline" shapeType="rect" aria-label="vesa_plate_outline" ariaLabel="vesa_plate_outline" tabindex="-1" />
     <text x="10" y="20" class="label" id="text100" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="mount" role="text100" shapeType="text" aria-label="text100" ariaLabel="text100" tabindex="-1">VESA Mount Plate</text>

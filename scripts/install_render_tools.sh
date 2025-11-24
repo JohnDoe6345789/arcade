@@ -10,7 +10,7 @@ set -euo pipefail
 # Installs:
 # - apt packages: pngcheck, ImageMagick (identify/compare), xmllint, Inkscape (skip via INSTALL_INKSCAPE=0)
 # - npm: svgo, svglint (global or --prefix with FAKEROOT)
-# - Python: cairosvg (prefers .venv if present)
+# - Python: cairosvg + pillow (prefers .venv if present)
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
@@ -19,7 +19,7 @@ if [[ ${INSTALL_INKSCAPE:-1} == 1 ]]; then
   APT_PACKAGES+=(inkscape)
 fi
 NPM_PACKAGES=(svgo svglint)
-PY_PACKAGES=(cairosvg)
+PY_PACKAGES=(cairosvg pillow)
 
 FAKEROOT="${FAKEROOT:-}"
 USE_FAKEROOT=0

@@ -3,7 +3,9 @@
   <style>.panel { fill:none; stroke:black; stroke-width:1; }
     .label { font-family:Arial; font-size:16px; }
     .dim { font-family:Arial; font-size:14px; font-style:italic; }
-    .title { font-family:Arial; font-size:22px; font-weight:bold; }</style>
+    .title { font-family:Arial; font-size:22px; font-weight:bold; }
+.label, .dim, .title { fill: #111; stroke: none; }
+</style>
   <g id="psu_tray" transform="translate(500,100)" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="panel" role="psu_tray" shapeType="g" aria-label="psu tray" ariaLabel="psu tray" tabindex="-1">
     <rect class="panel" x="0" y="0" width="180" height="150" rx="5" ry="5" id="psu_tray_outline" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="panel" role="psu_tray_outline" shapeType="rect" aria-label="psu_tray_outline" ariaLabel="psu_tray_outline" tabindex="-1" />
     <text x="10" y="20" class="label" id="text19" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="panel" role="text19" shapeType="text" aria-label="text19" ariaLabel="text19" tabindex="-1">ATX PSU Tray (Standard)</text>
