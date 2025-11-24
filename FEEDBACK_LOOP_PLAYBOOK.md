@@ -9,8 +9,8 @@ Use this loop to keep the project reviewed, documented, and shipped without drif
 - If the review raises no issues and tests are green, exit the loop until new changes arrive.
 
 ## Step 2) Run the PR workflow
-- When fixes or additions are needed, follow `PLAYBOOK_PR_WORKFLOW.md` to branch, push via the hook, and update the PR and merge.
+- When fixes or additions are needed, follow `PLAYBOOK_PR_WORKFLOW.md` to branch, push via the hook, update the PR, and merge via the hook when ready.
 - Keep test results and the review feedback reflected in the PR description and journal entry.
 
 ## Step 3) Repeat
-- After updates land, return to Step 1 and re-review until Step 1 exits cleanly.
+- After updates land (and merges complete), confirm tests are current if new changes were pulled, then return to Step 1 and re-review until Step 1 exits cleanly.
