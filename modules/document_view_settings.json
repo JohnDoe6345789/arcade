@@ -1,8 +1,8 @@
 {
   "tag": "{http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd}namedview",
-  "id": "namedview109",
+  "id": "document_view_settings",
   "attrib": {
-    "id": "namedview109",
+    "id": "document_view_settings",
     "pagecolor": "#ffffff",
     "bordercolor": "#000000",
     "borderopacity": "0.25",
@@ -20,16 +20,16 @@
     "{http://www.inkscape.org/namespaces/inkscape}window-y": "-8",
     "{http://www.inkscape.org/namespaces/inkscape}window-maximized": "1",
     "{http://www.inkscape.org/namespaces/inkscape}current-layer": "svg109",
-    "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+    "descriptionVerbose": "Canvas view configuration carried over from the source SVG.",
     "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
   },
   "children": [],
-  "descriptionVerbose": "namedview element with role 'namedview109', representing view namedview element inside module 'namedview109'.",
-  "notes": "This namedview node lives in module 'namedview109' and was semantically classified using id='namedview109', category='view', shapeType='namedview'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+  "descriptionVerbose": "namedview element capturing the Inkscape view/canvas settings for this document.",
+  "notes": "This namedview node stores canvas properties from the original drawing. Geometry and raw attributes are taken directly from the source SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
   "shapeType": "namedview",
   "category": "view",
-  "role": "namedview109",
-  "aria-label": "namedview109",
-  "ariaLabel": "namedview109",
+  "role": "document_view_settings",
+  "aria-label": "document view settings",
+  "ariaLabel": "document view settings",
   "tabindex": -1
 }

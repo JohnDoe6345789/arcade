@@ -39,7 +39,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--style-module",
-        default="style1",
+        default="base_style_rules",
         help="Module id that holds shared <style> rules to embed in each render.",
     )
     parser.add_argument(

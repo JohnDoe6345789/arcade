@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-10.0 -10.0 120.0 120.0" width="120.0mm" height="120.0mm" id="base_style_rules_svg">
+  <style>.panel { fill:none; stroke:black; stroke-width:1; }
+    .label { font-family:Arial; font-size:16px; }
+    .dim { font-family:Arial; font-size:14px; font-style:italic; }
+    .title { font-family:Arial; font-size:22px; font-weight:bold; }
+.label, .dim, .title { fill: #111; stroke: none; }
+</style>
+  <style id="base_style_rules" descriptionVerbose="Shared drawing styles for panel outlines and labels." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="style" role="base_style_rules" shapeType="style" aria-label="base style rules" ariaLabel="base style rules" tabindex="-1">.panel { fill:none; stroke:black; stroke-width:1; }
+    .label { font-family:Arial; font-size:16px; }
+    .dim { font-family:Arial; font-size:14px; font-style:italic; }
+    .title { font-family:Arial; font-size:22px; font-weight:bold; }</style>
+</svg>
