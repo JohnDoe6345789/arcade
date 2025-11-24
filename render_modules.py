@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Render JSON-based SVG modules into standalone SVG (and optional PNG) files."""
+"""Render JSON-based SVG modules into standalone SVG (and optional PNG/JPEG) files."""
 
 from __future__ import annotations
 
+import io
 import argparse
 import json
 import re
@@ -14,10 +15,11 @@ SVG_NS = "http://www.w3.org/2000/svg"
 ET.register_namespace("", SVG_NS)
 
 DEFAULT_STYLE = """.panel { fill: none; stroke: #111; stroke-width: 1; }
-.label { font-family: Arial, sans-serif; font-size: 16px; }
-.dim { font-family: Arial, sans-serif; font-size: 14px; font-style: italic; }
-.title { font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; }
+.label { font-family: Arial, sans-serif; font-size: 16px; fill: #111; stroke: none; }
+.dim { font-family: Arial, sans-serif; font-size: 14px; font-style: italic; fill: #111; stroke: none; }
+.title { font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; fill: #111; stroke: none; }
 """
+READABLE_TEXT_STYLE = ".label, .dim, .title { fill: #111; stroke: none; }"
 
 
 def parse_args() -> argparse.Namespace:
@@ -48,6 +50,13 @@ def parse_args() -> argparse.Namespace:
         help="Also emit PNGs alongside SVGs (requires cairosvg). Enabled by default.",
     )
     parser.add_argument(
+        "--jpg",
+        dest="emit_jpg",
+        default=True,
+        action=argparse.BooleanOptionalAction,
+        help="Also emit JPEGs alongside SVGs (requires Pillow + cairosvg). Enabled by default.",
+    )
+    parser.add_argument(
         "--module",
         dest="module_filter",
         action="append",
@@ -64,6 +73,17 @@ def normalize_tag(tag: str) -> str:
     return tag if tag.startswith("{") else f"{{{SVG_NS}}}{tag}"
 
 
+def print_import_hint(package: str, install_hint: str, note: str) -> None:
+    """Emit a helpful install hint without importing heavy CAD dependencies."""
+    try:
+        from cadquerywrapper import import_advice  # type: ignore
+    except Exception:
+        print(f"[warn] {package} not installed; {note} Install via: {install_hint}")
+        return
+
+    import_advice.print_import_advice(package, install_hint, note)
+
+
 def load_style_text(modules_dir: Path, style_id: str) -> str:
     style_path = modules_dir / f"{style_id}.json"
     if not style_path.exists():
@@ -71,6 +91,16 @@ def load_style_text(modules_dir: Path, style_id: str) -> str:
 
     data = json.loads(style_path.read_text(encoding="utf-8"))
     return data.get("text") or DEFAULT_STYLE
+
+
+def ensure_readable_text(style_text: str) -> str:
+    """Append a dark-text fallback so labels never render white on white backgrounds."""
+    normalized = (style_text or "").rstrip()
+    if READABLE_TEXT_STYLE in normalized:
+        return normalized
+    if normalized and not normalized.endswith("\n"):
+        normalized += "\n"
+    return f"{normalized}{READABLE_TEXT_STYLE}\n"
 
 
 def collect_attributes(node: dict) -> dict:
@@ -182,7 +212,9 @@ def element_bounds(node: dict, offset: tuple[float, float] = (0.0, 0.0)) -> tupl
     return combine_bounds(candidates)
 
 
-def render_module(module_data: dict, output_dir: Path, style_text: str, emit_png: bool = True) -> tuple[Path, Path | None]:
+def render_module(
+    module_data: dict, output_dir: Path, style_text: str, emit_png: bool = True, emit_jpg: bool = True
+) -> tuple[Path, Path | None, Path | None]:
     module_id = module_data.get("id", "module")
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -216,25 +248,52 @@ def render_module(module_data: dict, output_dir: Path, style_text: str, emit_png
     tree.write(svg_path, encoding="utf-8", xml_declaration=True)
 
     png_path: Path | None = None
-    if emit_png:
+    jpg_path: Path | None = None
+    raster_bytes: bytes | None = None
+
+    if emit_png or emit_jpg:
         try:
             import cairosvg  # type: ignore
 
-            png_path = output_dir / f"{module_id}.png"
-            cairosvg.svg2png(url=str(svg_path), write_to=str(png_path))
+            raster_bytes = cairosvg.svg2png(url=str(svg_path))
         except ImportError:
-            from cadquerywrapper.import_advice import print_import_advice
-
-            print_import_advice(
+            target = "PNG/JPEG" if emit_png and emit_jpg else "PNG" if emit_png else "JPEG"
+            print_import_hint(
                 "cairosvg",
-                "python -m pip install cairosvg (or pip install --user cairosvg); rerun with --no-png to skip raster output.",
-                f"PNG rendering for {module_id} is optional.",
+                "python -m pip install cairosvg (or pip install --user cairosvg); rerun with --no-png/--no-jpg to skip raster output.",
+                f"{target} rendering for {module_id} is optional.",
             )
         except Exception as exc:  # pragma: no cover - conversion errors depend on runtime env
-            print(f"[warn] Failed to render PNG for {module_id}: {exc}")
-            png_path = None
+            print(f"[warn] Failed to render raster image(s) for {module_id}: {exc}")
+            raster_bytes = None
 
-    return svg_path, png_path
+    if raster_bytes and emit_png:
+        png_path = output_dir / f"{module_id}.png"
+        png_path.write_bytes(raster_bytes)
+
+    if raster_bytes and emit_jpg:
+        try:
+            from PIL import Image  # type: ignore
+        except ImportError:
+            print_import_hint(
+                "Pillow",
+                "python -m pip install pillow (or pip install --user pillow); rerun with --no-jpg to skip JPEG output.",
+                f"JPEG rendering for {module_id} is optional.",
+            )
+        else:
+            with Image.open(io.BytesIO(raster_bytes)) as img:
+                if img.mode in ("RGBA", "LA"):
+                    background = Image.new("RGB", img.size, "#f7f8fa")
+                    alpha = img.getchannel("A")
+                    background.paste(img, mask=alpha)
+                    img = background
+                else:
+                    img = img.convert("RGB")
+
+                jpg_path = output_dir / f"{module_id}.jpg"
+                img.save(jpg_path, format="JPEG", optimize=True, quality=95)
+
+    return svg_path, png_path, jpg_path
 
 
 def iter_modules(modules_dir: Path, module_filter: list[str] | None) -> Iterable[Path]:
@@ -246,18 +305,27 @@ def iter_modules(modules_dir: Path, module_filter: list[str] | None) -> Iterable
 
 def main() -> None:
     args = parse_args()
-    style_text = load_style_text(args.modules, args.style_module)
+    style_text = ensure_readable_text(load_style_text(args.modules, args.style_module))
 
     svg_count = 0
     png_count = 0
+    jpg_count = 0
     for module_path in iter_modules(args.modules, args.module_filter):
         data = json.loads(module_path.read_text(encoding="utf-8"))
-        svg_path, maybe_png = render_module(data, args.out, style_text, emit_png=args.emit_png)
+        svg_path, maybe_png, maybe_jpg = render_module(
+            data, args.out, style_text, emit_png=args.emit_png, emit_jpg=args.emit_jpg
+        )
         svg_count += 1
         png_count += 1 if maybe_png else 0
-        print(f"[ok] Rendered {module_path.stem} -> {svg_path.name}" + (f", {maybe_png.name}" if maybe_png else ""))
+        jpg_count += 1 if maybe_jpg else 0
+        artifacts = [svg_path.name]
+        if maybe_png:
+            artifacts.append(maybe_png.name)
+        if maybe_jpg:
+            artifacts.append(maybe_jpg.name)
+        print(f"[ok] Rendered {module_path.stem} -> {', '.join(artifacts)}")
 
-    print(f"Finished rendering {svg_count} module(s); PNGs generated for {png_count}.")
+    print(f"Finished rendering {svg_count} module(s); PNGs generated for {png_count}; JPEGs generated for {jpg_count}.")
 
 
 if __name__ == "__main__":
