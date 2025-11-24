@@ -23,25 +23,13 @@
 - Ensure `toc.json` entries map one-to-one with files in `modules/` and that every node exposes non-empty ids containing letters.
 
 ## Git Hook for Custom Branch PRs
+- GitHub auto-PR workflow is removed; rely on the local hook to open PRs for `custom/*` branches.
 - All pushes to branches matching `custom/*` must go through the local hook wrapper to auto-open a PR against `main`.
-- Install `.git/hooks/push-pr.ps1` with executable bit and the following content:
-  ```powershell
-  #!/usr/bin/env pwsh
-  $remote = if ($args.Length -ge 1) { $args[0] } else { "origin" }
-  $branch = git rev-parse --abbrev-ref HEAD
-  if ($branch -notlike "custom/*") { exit 0 }
-
-  git push $remote $branch
-  if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-
-  $existing = gh pr list --head $branch --state open --json number 2>$null | ConvertFrom-Json
-  if ($existing.Count -gt 0) { exit 0 }
-
-  gh pr create --head $branch --base main --title "Auto PR for $branch" --fill
-  ```
-- The script is checked in at `.github/hooks/push-pr.ps1`; copy it into `.git/hooks/push-pr.ps1` locally.
-- Add the alias: `git config alias.pushpr '!powershell -ExecutionPolicy Bypass -File .git/hooks/push-pr.ps1'` (swap `powershell` for `pwsh` if you prefer Core).
-- Use `git pushpr` instead of `git push` for `custom/*`; bypassing this flow is not allowed.
+- Install the platform hook: copy `.github/hooks/pushpr-lin.sh` (Linux) or `.github/hooks/pushpr-win.ps1` (Windows) into `.git/hooks/` and make it executable.
+- Add the alias for your platform:
+  - Linux: `git config alias.pushpr-lin '!bash .git/hooks/pushpr-lin.sh'`
+  - Windows: `git config alias.pushpr-win '!powershell -ExecutionPolicy Bypass -File .git/hooks/pushpr-win.ps1'`
+- Use `git pushpr-lin` or `git pushpr-win` instead of `git push` for `custom/*`; bypassing this flow is not allowed.
 - Keep `gh` authenticated; the hook will no-op on non-`custom/*` branches so standard pushes still work elsewhere.
 
 ## Commit & Pull Request Guidelines
