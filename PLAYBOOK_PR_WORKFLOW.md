@@ -5,6 +5,7 @@ Step-by-step flow to create branches, open PRs with the custom hook, handle revi
 ## 1) Prepare
 - Ensure `gh` is authenticated (`gh auth status`).
 - Install the push hook: copy `.github/hooks/pushpr-lin.sh` or `.github/hooks/pushpr-win.ps1` into `.git/hooks/` and set the matching alias (`git config alias.pushpr-lin '!bash .git/hooks/pushpr-lin.sh'` or `git config alias.pushpr-win '!powershell -ExecutionPolicy Bypass -File .git/hooks/pushpr-win.ps1'`).
+- If running tests on WSL, export `TMPDIR=/tmp` before invoking pytest to avoid capture temp-file errors on `/mnt/c`.
 - Verify you are on `main` and up to date: `git switch main && git pull`.
 
 ## 2) Create a feature branch
@@ -33,7 +34,7 @@ Step-by-step flow to create branches, open PRs with the custom hook, handle revi
 ## Quick checklist
 - [ ] On `custom/<topic>` branch, up to date with `main`.
 - [ ] Changes committed with clear messages.
-- [ ] Tests run or explicitly noted.
+- [ ] Tests run or explicitly noted (`TMPDIR=/tmp` on WSL when running pytest).
 - [ ] PR opened/updated via push hook; diff summary present.
 - [ ] `CODE_REVIEW_JOURNAL.md` updated with verdict and follow-ups.
 - [ ] Auto-merge (with delete) completed; local branch removed after pulling main.
