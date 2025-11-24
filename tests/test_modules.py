@@ -114,7 +114,7 @@ def _monitor_dimensions(diagonal_inches: float) -> tuple[float, float]:
 def test_monitor_bezel_viewing_window_supports_22_and_24_inch_screens():
     bezel = load_module("monitor_bezel_panel")
     viewing_window = next(
-        child for child in bezel["children"] if child.get("attrib", {}).get("id") == "rect97"
+        child for child in bezel["children"] if child.get("attrib", {}).get("id") == "bezel_viewing_window"
     )["attrib"]
 
     window_width = float(viewing_window["width"])
@@ -150,4 +150,93 @@ def test_vesa_mount_plate_supports_75_and_100_mm_patterns():
 
     assert hundred_pattern.issubset(centers), "VESA 100x100 mm bolt pattern should be present"
     assert seventy_five_pattern.issubset(centers), "VESA 75x75 mm bolt pattern should be present"
+
+
+def _iter_objects(value):
+    if isinstance(value, dict):
+        yield value
+        for child in value.values():
+            yield from _iter_objects(child)
+    elif isinstance(value, list):
+        for item in value:
+            yield from _iter_objects(item)
+
+
+def _expressiveness_score(identifier: str) -> float:
+    """Score identifiers so descriptive names outrank auto-generated labels.
+
+    The scoring intentionally docks short, generic SVG-derived ids such as
+    "circle2" while rewarding longer, tokenized names like
+    "case_back_panel_usb_port". The algorithm is deliberately simple: size and
+    word-like tokens add points, while common SVG prefixes paired with numeric
+    suffixes lose points.
+    """
+
+    name = identifier.strip()
+    score = len(name) / 3
+
+    tokens = [token for token in re.split(r"[_\s-]+", name) if token]
+    if len(tokens) > 1:
+        score += 0.5 * (len(tokens) - 1)
+    if "_" in name or "-" in name:
+        score += 1
+    if len(name) >= 15:
+        score += 0.5
+
+    if re.fullmatch(r"(?i)(rect|circle|path|line|g)\d+", name):
+        score -= 3
+    elif re.match(r"(?i)^(rect|circle|path|line|g)[\d_]*$", name):
+        score -= 1
+    if re.search(r"\d+$", name) and len(tokens) <= 1:
+        score -= 0.5
+
+    return score
+
+
+def test_identifier_scoring_rewards_expressive_names():
+    lazy = _expressiveness_score("circle2")
+    lazy_bulk = _expressiveness_score("circle25")
+    descriptive = _expressiveness_score("case_back_panel_usb_port")
+
+    assert descriptive > lazy, "Descriptive identifiers should outrank lazy SVG defaults"
+    assert lazy_bulk < 0.5, "SVG auto-generated ids should be heavily penalized"
+    assert lazy < 1.5, "Lazy names should receive a meaningful penalty"
+    assert descriptive >= lazy + 4, "Richly tokenized names should earn a meaningful boost"
+
+
+def test_identifiers_are_expressive_strings():
+    """All nodes with ids should expose non-empty, descriptive-friendly identifiers."""
+
+    scores = []
+    lazy_ids = []
+    lazy_pattern = re.compile(r"^(rect|circle|path|line|g)\d+$", re.IGNORECASE)
+    for module_path in MODULES_DIR.glob("*.json"):
+        data = json.loads(module_path.read_text())
+
+        for obj in _iter_objects(data):
+            if "id" not in obj:
+                continue
+
+            ident = obj["id"]
+            assert isinstance(ident, str), f"id must be a string in {module_path.name}: {ident!r}"
+
+            normalized = ident.strip()
+            assert normalized, f"id must not be empty or whitespace in {module_path.name}"
+            assert any(ch.isalpha() for ch in normalized), f"id should be expressive and contain letters: {ident!r} in {module_path.name}"
+
+            if lazy_pattern.match(normalized):
+                lazy_ids.append((module_path.name, normalized))
+
+            score = _expressiveness_score(normalized)
+            scores.append(score)
+
+    assert scores, "No ids were discovered to score"
+
+    assert not lazy_ids, f"Replace auto-generated ids: {lazy_ids}"
+
+    average_score = sum(scores) / len(scores)
+    weak_identifiers = [score for score in scores if score < 0.5]
+
+    assert average_score >= 1.5, "Identifiers should trend toward descriptive, longer names"
+    assert len(weak_identifiers) <= max(10, len(scores) * 0.05), "Only a handful of ids should look like SVG defaults"
 

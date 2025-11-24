@@ -10,7 +10,7 @@
   "children": [
     {
       "tag": "{http://www.w3.org/2000/svg}rect",
-      "id": "rect96",
+      "id": "bezel_outer_perimeter",
       "attrib": {
         "class": "panel",
         "x": "0",
@@ -19,18 +19,18 @@
         "height": "420",
         "rx": "5",
         "ry": "5",
-        "id": "rect96",
+        "id": "bezel_outer_perimeter",
         "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
         "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
       },
       "children": [],
-      "descriptionVerbose": "rect element with role 'rect96', representing rectangular outline of the monitor bezel panel.",
-      "notes": "This rect node lives in module 'monitor_bezel_panel' and was semantically classified using id='rect96', category='panel', shapeType='rect'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "descriptionVerbose": "rect element with role 'bezel_outer_perimeter', representing rectangular outline of the monitor bezel panel.",
+      "notes": "This rect node lives in module 'monitor_bezel_panel' and was semantically classified using id='bezel_outer_perimeter', category='panel', shapeType='rect'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
       "shapeType": "rect",
       "category": "panel",
-      "role": "rect96",
-      "aria-label": "rect96",
-      "ariaLabel": "rect96",
+      "role": "bezel_outer_perimeter",
+      "aria-label": "bezel_outer_perimeter",
+      "ariaLabel": "bezel_outer_perimeter",
       "tabindex": -1
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "tag": "{http://www.w3.org/2000/svg}rect",
-      "id": "rect97",
+      "id": "bezel_viewing_window",
       "attrib": {
         "class": "panel",
         "x": "30",
@@ -88,18 +88,18 @@
         "height": "320",
         "rx": "3",
         "ry": "3",
-        "id": "rect97",
+        "id": "bezel_viewing_window",
         "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
         "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
       },
       "children": [],
-      "descriptionVerbose": "rect element with role 'rect97', representing rectangular outline of the monitor bezel panel.",
-      "notes": "This rect node lives in module 'monitor_bezel_panel' and was semantically classified using id='rect97', category='panel', shapeType='rect'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "descriptionVerbose": "rect element with role 'bezel_viewing_window', representing rectangular outline of the monitor bezel panel.",
+      "notes": "This rect node lives in module 'monitor_bezel_panel' and was semantically classified using id='bezel_viewing_window', category='panel', shapeType='rect'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
       "shapeType": "rect",
       "category": "panel",
-      "role": "rect97",
-      "aria-label": "rect97",
-      "ariaLabel": "rect97",
+      "role": "bezel_viewing_window",
+      "aria-label": "bezel_viewing_window",
+      "ariaLabel": "bezel_viewing_window",
       "tabindex": -1
     },
     {
