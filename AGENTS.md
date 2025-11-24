@@ -40,7 +40,7 @@
   gh pr create --head $branch --base main --title "Auto PR for $branch" --fill
   ```
 - The script is checked in at `.github/hooks/push-pr.ps1`; copy it into `.git/hooks/push-pr.ps1` locally.
-- Add the alias: `git config alias.pushpr '!pwsh .git/hooks/push-pr.ps1'`.
+- Add the alias: `git config alias.pushpr '!powershell -ExecutionPolicy Bypass -File .git/hooks/push-pr.ps1'` (swap `powershell` for `pwsh` if you prefer Core).
 - Use `git pushpr` instead of `git push` for `custom/*`; bypassing this flow is not allowed.
 - Keep `gh` authenticated; the hook will no-op on non-`custom/*` branches so standard pushes still work elsewhere.
 
