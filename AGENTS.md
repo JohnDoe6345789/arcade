@@ -33,6 +33,7 @@
 - Keep `gh` authenticated; the hook will no-op on non-`custom/*` branches so standard pushes still work elsewhere.
 - Optional auto-merge and branch cleanup: run the hook with `--auto-merge` (plus optional `--merge-method=merge|squash|rebase`) or set `PUSHPR_AUTO_MERGE=1` and `PUSHPR_MERGE_METHOD` to have it call `gh pr merge --auto --delete-branch` after creating/updating the PR.
 - The hooks rely on `gh pr list` and `gh pr merge --auto`; `gh pr create` currently lacks `--json` output, so if the hook does not open a PR automatically, run `gh pr create --fill --title \"Auto PR for <branch>\"` yourself and then re-run the hook with `--auto-merge` (or call `gh pr merge --auto --delete-branch` manually).
+- After the hook (or manual fallback) opens the PR, review the diff immediately and merge if everything looks good so `custom/*` branches do not linger.
 
 ## Commit & Pull Request Guidelines
 - Commits: concise imperative subject (`Add bezel window check`), reference the affected module(s), and group related JSON changes together.
