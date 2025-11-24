@@ -4,8 +4,8 @@ Use this loop to keep the project reviewed, documented, and shipped without drif
 
 ## Step 1) Code review the project (exit when clean)
 - Review the current branch/PR and scan the whole project (modules/toc, code, scripts, tests) for metadata, geometry, or logic regressions. Read the actual code and JSON content (not just diffs) to understand intent, catch context loss, and spot silent regressions. Anchor on best practices: understand intent, check correctness and edge cases, keep comments/ids clear, prefer small focused diffs, leave actionable concise feedback, and watch code coverage/critical paths when new logic lands.
-- Run validation (prefer `python3 -m pytest` from a clean venv; on WSL set `TMPDIR=/tmp` to avoid capture temp-file issues) and capture any failures.
-- Check whether a repo-local `venv/` exists so you activate the right environment before running tests.
+- Check for a repo-local virtualenv (`venv/` or `.venv/`) and activate it before running tests; if absent, create one (`python3 -m venv venv`) and install pytest.
+- Run validation from that environment (`TMPDIR=/tmp venv/bin/python -m pytest` on WSL/Linux or `.\\venv\\Scripts\\python -m pytest` on Windows) and capture any failures.
 - Log the outcome in `CODE_REVIEW_JOURNAL.md` with verdict, tests, and follow-ups.
 - If the review raises no issues and tests are green, exit the loop until new changes arrive.
 

@@ -3,6 +3,34 @@
 Use this log to keep a lightweight record of code review passes. Append new entries at the top so the latest review is easiest to find.
 
 ## 2025-11-24 – Codex
+- PR/Branch: custom/doc-venv-clarity (local)
+- Scope: Documentation clarity updates to FEEDBACK_LOOP_PLAYBOOK (explicit venv activation + platform-specific pytest commands).
+- Tests: `TMPDIR=/tmp venv/bin/python -m pytest` (passes: 27 passed in ~2.8s)
+- Verdict: approve
+- Follow-ups: None.
+
+## 2025-11-24 – Codex
+- PR/Branch: main (local audit)
+- Scope: Documentation clarity pass on FEEDBACK_LOOP_PLAYBOOK (explicit venv activation + commands); no module/toc/code changes observed.
+- Tests: not run (doc-only; prior run `TMPDIR=/tmp venv/bin/python -m pytest` was green)
+- Verdict: approve
+- Follow-ups: None.
+
+## 2025-11-24 – Codex
+- PR/Branch: main (local audit)
+- Scope: Feedback loop pass; no module/toc regressions spotted; verified tests from repo venv per playbook.
+- Tests: `TMPDIR=/tmp venv/bin/python -m pytest` (passes: 27 passed in ~2.9s)
+- Verdict: approve
+- Follow-ups: None.
+
+## 2025-11-24 – Codex
+- PR/Branch: main (local audit)
+- Scope: Feedback loop pass; suite blocked by missing cadquerywrapper dependency (`trimesh`); no new module/toc changes observed.
+- Tests: `TMPDIR=/tmp python3 -m pytest` (fails: ModuleNotFoundError for trimesh during cadquerywrapper/tests/test_validator.py collection; earlier `python -m pytest` missing interpreter)
+- Verdict: changes requested
+- Follow-ups: Install cadquerywrapper deps (trimesh/cadquery) or skip those tests in this environment, then rerun the full pytest suite for module/toc coverage.
+
+## 2025-11-24 – Codex
 - PR/Branch: main (local audit)
 - Scope: Feedback loop pass; suite blocked during cadquerywrapper test collection due to missing trimesh; no new module/toc changes spotted.
 - Tests: `TMPDIR=/tmp python3 -m pytest` (fails: ModuleNotFoundError for trimesh when collecting cadquerywrapper/tests/test_validator.py)
