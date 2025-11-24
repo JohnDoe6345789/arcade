@@ -4,6 +4,34 @@ Use this log to keep a lightweight record of code review passes. Append new entr
 
 ## 2025-11-24 – Codex
 - PR/Branch: main (local audit)
+- Scope: Feedback loop pass; FEEDBACK_LOOP_PLAYBOOK wording refreshed to remove hesitation; no new module/toc changes spotted.
+- Tests: `TMPDIR=/tmp venv/bin/python -m pytest` (passes: 27 passed in ~2.7s)
+- Verdict: approve
+- Follow-ups: Persist the `TMPDIR=/tmp` env for WSL pytest runs; none else.
+
+## 2025-11-24 – Codex
+- PR/Branch: main (local audit)
+- Scope: Feedback loop pass; no new module/toc changes detected; reran suite with WSL tempdir override.
+- Tests: `TMPDIR=/tmp venv/bin/python -m pytest` (passes: 27 passed in ~2.6s)
+- Verdict: approve
+- Follow-ups: Persist the `TMPDIR=/tmp` workaround in WSL shells or test docs to avoid pytest capture temp-file errors; otherwise none.
+
+## 2025-11-24 – Codex
+- PR/Branch: main (local audit)
+- Scope: Full suite run after tempdir override; modules/toc spot-check (no new regressions observed).
+- Tests: `TMPDIR=/tmp venv/bin/python -m pytest` (passes: 27 passed in ~2.7s)
+- Verdict: approve
+- Follow-ups: Consider documenting or exporting `TMPDIR=/tmp` for WSL runs to avoid pytest capture temp-file errors on /mnt/c; otherwise none.
+
+## 2025-11-24 – Codex
+- PR/Branch: main (local audit)
+- Scope: Feedback loop playbook check; baseline modules/toc scan (no new changes spotted) ahead of test run.
+- Tests: `.venv/bin/python -m pytest` (fails: pytest capture temp file FileNotFoundError before collection; 0 tests collected)
+- Verdict: changes requested
+- Follow-ups: Fix the pytest capture tmpfile handling on this environment so the suite can execute; rerun the full suite for module/toc coverage once resolved.
+
+## 2025-11-24 – Codex
+- PR/Branch: main (local audit)
 - Scope: Baseline module/catalog health and workflow playbooks; spot-check of bottom_panel_dowels metadata.
 - Tests: `python3 -m pytest` (fails: pytest capture FileNotFoundError before collection; 0 tests collected)
 - Verdict: changes requested
