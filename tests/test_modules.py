@@ -102,3 +102,52 @@ def test_motherboard_tray_atx_hole_layout():
     assert math.isclose(max(xs) - min(xs), 285.115, abs_tol=0.01), "ATX width should be 11.225 in (285.115 mm)"
     assert math.isclose(max(ys) - min(ys), 222.25, abs_tol=0.01), "ATX height should be 8.75 in (222.25 mm)"
 
+
+def _monitor_dimensions(diagonal_inches: float) -> tuple[float, float]:
+    diagonal_mm = diagonal_inches * 25.4
+    aspect_width = 16
+    aspect_height = 9
+    scale = diagonal_mm / math.sqrt(aspect_width**2 + aspect_height**2)
+    return aspect_width * scale, aspect_height * scale
+
+
+def test_monitor_bezel_viewing_window_supports_22_and_24_inch_screens():
+    bezel = load_module("monitor_bezel_panel")
+    viewing_window = next(
+        child for child in bezel["children"] if child.get("attrib", {}).get("id") == "rect97"
+    )["attrib"]
+
+    window_width = float(viewing_window["width"])
+    window_height = float(viewing_window["height"])
+    window_diagonal = math.hypot(window_width, window_height)
+
+    for diagonal in (22, 24):
+        screen_width, screen_height = _monitor_dimensions(diagonal)
+        screen_diagonal = math.hypot(screen_width, screen_height)
+
+        assert screen_width < window_width, f"{diagonal}\" monitor width should fit within bezel window"
+        assert screen_height < window_height, f"{diagonal}\" monitor height should fit within bezel window"
+        assert screen_diagonal < window_diagonal, f"{diagonal}\" monitor diagonal should fit within bezel window"
+
+
+def test_vesa_mount_plate_supports_75_and_100_mm_patterns():
+    vesa = load_module("vesa_mount_plate")
+    hole_group = [
+        child
+        for child in vesa["children"]
+        if child["tag"].endswith("circle") and child.get("attrib", {}).get("class") == "panel"
+    ]
+
+    centers = {(float(hole["attrib"]["cx"]), float(hole["attrib"]["cy"])) for hole in hole_group}
+
+    hundred_pattern = {(100.0, 100.0), (200.0, 100.0), (100.0, 200.0), (200.0, 200.0)}
+    seventy_five_pattern = {
+        (112.5, 112.5),
+        (187.5, 112.5),
+        (112.5, 187.5),
+        (187.5, 187.5),
+    }
+
+    assert hundred_pattern.issubset(centers), "VESA 100x100 mm bolt pattern should be present"
+    assert seventy_five_pattern.issubset(centers), "VESA 75x75 mm bolt pattern should be present"
+
