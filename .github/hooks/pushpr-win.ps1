@@ -63,7 +63,7 @@ $diffSummary
 }
 
 if ($prNumber -and $autoMerge -eq 1) {
-  $mergeFlag = ""
+  $mergeFlag = "--merge"
   switch ($mergeMethod) {
     "merge" { $mergeFlag = "--merge" }
     "squash" { $mergeFlag = "--squash" }

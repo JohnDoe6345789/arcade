@@ -50,7 +50,7 @@ if command -v gh >/dev/null 2>&1; then
   fi
 
   if [[ -n "${pr_number}" && "${auto_merge}" -eq 1 ]]; then
-    merge_flag=""
+    merge_flag="--merge"
     case "${merge_method}" in
       merge|squash|rebase) merge_flag="--${merge_method}" ;;
     esac
