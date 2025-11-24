@@ -1,0 +1,199 @@
+{
+  "tag": "{http://www.w3.org/2000/svg}g",
+  "id": "bottom_panel_dowels",
+  "attrib": {
+    "id": "bottom_panel_dowels",
+    "transform": "translate(20,500)",
+    "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+    "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+  },
+  "children": [
+    {
+      "tag": "{http://www.w3.org/2000/svg}rect",
+      "id": "rect24",
+      "attrib": {
+        "class": "panel",
+        "x": "0",
+        "y": "0",
+        "width": "620",
+        "height": "540",
+        "rx": "5",
+        "ry": "5",
+        "id": "rect24",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [],
+      "descriptionVerbose": "rect element with role 'rect24', representing rectangular outline of the bottom cabinet panel.",
+      "notes": "This rect node lives in module 'bottom_panel_dowels' and was semantically classified using id='rect24', category='panel', shapeType='rect'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "rect",
+      "category": "panel",
+      "role": "rect24",
+      "aria-label": "rect24",
+      "ariaLabel": "rect24",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text25",
+      "attrib": {
+        "x": "10",
+        "y": "20",
+        "class": "label",
+        "id": "text25",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "Bottom Panel with Chungus Dowels",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text25', representing text label node containing the string \u201cBottom Panel with Chungus Dowels\u201d.",
+      "notes": "This text node lives in module 'bottom_panel_dowels' and was semantically classified using id='text25', category='panel', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "panel",
+      "role": "text25",
+      "aria-label": "text25",
+      "ariaLabel": "text25",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}circle",
+      "id": "circle25",
+      "attrib": {
+        "class": "panel",
+        "cx": "60",
+        "cy": "500",
+        "r": "5",
+        "id": "circle25",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [],
+      "descriptionVerbose": "circle element with role 'circle25', representing cylindrical dowel hole location in the bottom panel.",
+      "notes": "This circle node lives in module 'bottom_panel_dowels' and was semantically classified using id='circle25', category='panel', shapeType='circle'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "circle",
+      "category": "panel",
+      "role": "circle25",
+      "aria-label": "circle25",
+      "ariaLabel": "circle25",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}circle",
+      "id": "circle26",
+      "attrib": {
+        "class": "panel",
+        "cx": "540",
+        "cy": "500",
+        "r": "5",
+        "id": "circle26",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [],
+      "descriptionVerbose": "circle element with role 'circle26', representing cylindrical dowel hole location in the bottom panel.",
+      "notes": "This circle node lives in module 'bottom_panel_dowels' and was semantically classified using id='circle26', category='panel', shapeType='circle'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "circle",
+      "category": "panel",
+      "role": "circle26",
+      "aria-label": "circle26",
+      "ariaLabel": "circle26",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}circle",
+      "id": "circle27",
+      "attrib": {
+        "class": "panel",
+        "cx": "60",
+        "cy": "40",
+        "r": "5",
+        "id": "circle27",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [],
+      "descriptionVerbose": "circle element with role 'circle27', representing cylindrical dowel hole location in the bottom panel.",
+      "notes": "This circle node lives in module 'bottom_panel_dowels' and was semantically classified using id='circle27', category='panel', shapeType='circle'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "circle",
+      "category": "panel",
+      "role": "circle27",
+      "aria-label": "circle27",
+      "ariaLabel": "circle27",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}circle",
+      "id": "circle28",
+      "attrib": {
+        "class": "panel",
+        "cx": "540",
+        "cy": "40",
+        "r": "5",
+        "id": "circle28",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [],
+      "descriptionVerbose": "circle element with role 'circle28', representing cylindrical dowel hole location in the bottom panel.",
+      "notes": "This circle node lives in module 'bottom_panel_dowels' and was semantically classified using id='circle28', category='panel', shapeType='circle'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "circle",
+      "category": "panel",
+      "role": "circle28",
+      "aria-label": "circle28",
+      "ariaLabel": "circle28",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}circle",
+      "id": "circle29",
+      "attrib": {
+        "class": "panel",
+        "cx": "700",
+        "cy": "100",
+        "r": "5",
+        "id": "circle29",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [],
+      "descriptionVerbose": "circle element with role 'circle29', representing cylindrical dowel hole location in the bottom panel.",
+      "notes": "This circle node lives in module 'bottom_panel_dowels' and was semantically classified using id='circle29', category='panel', shapeType='circle'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "circle",
+      "category": "panel",
+      "role": "circle29",
+      "aria-label": "circle29",
+      "ariaLabel": "circle29",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}circle",
+      "id": "circle30",
+      "attrib": {
+        "class": "panel",
+        "cx": "700",
+        "cy": "300",
+        "r": "5",
+        "id": "circle30",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [],
+      "descriptionVerbose": "circle element with role 'circle30', representing cylindrical dowel hole location in the bottom panel.",
+      "notes": "This circle node lives in module 'bottom_panel_dowels' and was semantically classified using id='circle30', category='panel', shapeType='circle'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "circle",
+      "category": "panel",
+      "role": "circle30",
+      "aria-label": "circle30",
+      "ariaLabel": "circle30",
+      "tabindex": -1
+    }
+  ],
+  "descriptionVerbose": "g element with role 'bottom_panel_dowels', representing dowel location used to align and register cabinet panels.",
+  "notes": "This g node lives in module 'bottom_panel_dowels' and was semantically classified using id='bottom_panel_dowels', category='panel', shapeType='g'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+  "shapeType": "g",
+  "category": "panel",
+  "role": "bottom_panel_dowels",
+  "aria-label": "bottom panel dowels",
+  "ariaLabel": "bottom panel dowels",
+  "tabindex": -1
+}

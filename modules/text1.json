@@ -1,0 +1,22 @@
+{
+  "tag": "{http://www.w3.org/2000/svg}text",
+  "id": "text1",
+  "attrib": {
+    "x": "20",
+    "y": "40",
+    "class": "title",
+    "id": "text1",
+    "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+    "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+  },
+  "text": "Arcade Cabinet Panel Footprints (All dimensions in millimeters)",
+  "children": [],
+  "descriptionVerbose": "text element with role 'text1', representing annotation text describing dimensions or assembly notes.",
+  "notes": "This text node lives in module 'text1' and was semantically classified using id='text1', category='annotation', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+  "shapeType": "text",
+  "category": "annotation",
+  "role": "text1",
+  "aria-label": "text1",
+  "ariaLabel": "text1",
+  "tabindex": -1
+}

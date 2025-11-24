@@ -1,0 +1,262 @@
+{
+  "tag": "{http://www.w3.org/2000/svg}g",
+  "id": "assembly_instructions",
+  "attrib": {
+    "id": "assembly_instructions",
+    "transform": "translate(900,100)",
+    "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+    "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+  },
+  "children": [
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text30",
+      "attrib": {
+        "x": "0",
+        "y": "0",
+        "class": "title",
+        "id": "text30",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "Assembly Instructions",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text30', representing annotation text describing dimensions or assembly notes.",
+      "notes": "This text node lives in module 'assembly_instructions' and was semantically classified using id='text30', category='annotation', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "annotation",
+      "role": "text30",
+      "aria-label": "text30",
+      "ariaLabel": "text30",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text31",
+      "attrib": {
+        "x": "0",
+        "y": "40",
+        "class": "label",
+        "id": "text31",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "1. Insert 10 mm bottom-panel dowels into motherboard tray sockets.",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text31', representing annotation text describing dimensions or assembly notes.",
+      "notes": "This text node lives in module 'assembly_instructions' and was semantically classified using id='text31', category='annotation', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "annotation",
+      "role": "text31",
+      "aria-label": "text31",
+      "ariaLabel": "text31",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text32",
+      "attrib": {
+        "x": "0",
+        "y": "70",
+        "class": "label",
+        "id": "text32",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "2. Slide motherboard tray forward until dowels fully seat.",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text32', representing annotation text describing dimensions or assembly notes.",
+      "notes": "This text node lives in module 'assembly_instructions' and was semantically classified using id='text32', category='annotation', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "annotation",
+      "role": "text32",
+      "aria-label": "text32",
+      "ariaLabel": "text32",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text33",
+      "attrib": {
+        "x": "0",
+        "y": "100",
+        "class": "label",
+        "id": "text33",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "3. Install ATX standoffs in labeled ATX/mATX/ITX hole pattern.",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text33', representing annotation text describing dimensions or assembly notes.",
+      "notes": "This text node lives in module 'assembly_instructions' and was semantically classified using id='text33', category='annotation', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "annotation",
+      "role": "text33",
+      "aria-label": "text33",
+      "ariaLabel": "text33",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text34",
+      "attrib": {
+        "x": "0",
+        "y": "130",
+        "class": "label",
+        "id": "text34",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "4. Mount motherboard and tighten screws evenly.",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text34', representing annotation text describing dimensions or assembly notes.",
+      "notes": "This text node lives in module 'assembly_instructions' and was semantically classified using id='text34', category='annotation', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "annotation",
+      "role": "text34",
+      "aria-label": "text34",
+      "ariaLabel": "text34",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text35",
+      "attrib": {
+        "x": "0",
+        "y": "160",
+        "class": "label",
+        "id": "text35",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "5. Align PSU tray dowel sockets with bottom panel dowels.",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text35', representing annotation text describing dimensions or assembly notes.",
+      "notes": "This text node lives in module 'assembly_instructions' and was semantically classified using id='text35', category='annotation', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "annotation",
+      "role": "text35",
+      "aria-label": "text35",
+      "ariaLabel": "text35",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text36",
+      "attrib": {
+        "x": "0",
+        "y": "190",
+        "class": "label",
+        "id": "text36",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "6. Slide PSU tray downward until fully locked.",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text36', representing annotation text describing dimensions or assembly notes.",
+      "notes": "This text node lives in module 'assembly_instructions' and was semantically classified using id='text36', category='annotation', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "annotation",
+      "role": "text36",
+      "aria-label": "text36",
+      "ariaLabel": "text36",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text37",
+      "attrib": {
+        "x": "0",
+        "y": "220",
+        "class": "label",
+        "id": "text37",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "7. Install PSU screws using 81.5 \u00d7 71.5 mm pattern.",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text37', representing annotation text describing dimensions or assembly notes.",
+      "notes": "This text node lives in module 'assembly_instructions' and was semantically classified using id='text37', category='annotation', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "annotation",
+      "role": "text37",
+      "aria-label": "text37",
+      "ariaLabel": "text37",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text38",
+      "attrib": {
+        "x": "0",
+        "y": "250",
+        "class": "label",
+        "id": "text38",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "8. Connect motherboard 24-pin, CPU 8-pin, GPU power as needed.",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text38', representing annotation text describing dimensions or assembly notes.",
+      "notes": "This text node lives in module 'assembly_instructions' and was semantically classified using id='text38', category='annotation', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "annotation",
+      "role": "text38",
+      "aria-label": "text38",
+      "ariaLabel": "text38",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text39",
+      "attrib": {
+        "x": "0",
+        "y": "280",
+        "class": "label",
+        "id": "text39",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "9. Install Raspberry Pi 5 on its 58\u00d748 mm mount if used.",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text39', representing annotation text describing dimensions or assembly notes.",
+      "notes": "This text node lives in module 'assembly_instructions' and was semantically classified using id='text39', category='annotation', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "annotation",
+      "role": "text39",
+      "aria-label": "text39",
+      "ariaLabel": "text39",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text40",
+      "attrib": {
+        "x": "0",
+        "y": "310",
+        "class": "label",
+        "id": "text40",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "10. Ensure CPU cooler fits within service cutout area.",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text40', representing annotation text describing dimensions or assembly notes.",
+      "notes": "This text node lives in module 'assembly_instructions' and was semantically classified using id='text40', category='annotation', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "annotation",
+      "role": "text40",
+      "aria-label": "text40",
+      "ariaLabel": "text40",
+      "tabindex": -1
+    }
+  ],
+  "descriptionVerbose": "g element with role 'assembly_instructions', representing annotation text describing dimensions or assembly notes.",
+  "notes": "This g node lives in module 'assembly_instructions' and was semantically classified using id='assembly_instructions', category='annotation', shapeType='g'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+  "shapeType": "g",
+  "category": "annotation",
+  "role": "assembly_instructions",
+  "aria-label": "assembly instructions",
+  "ariaLabel": "assembly instructions",
+  "tabindex": -1
+}
