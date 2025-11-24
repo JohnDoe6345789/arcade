@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="890.0 874.0 340.0 306.0" width="340.0mm" height="306.0mm" id="iso_front_left_svg">
+  <style>.panel { fill:none; stroke:black; stroke-width:1; }
+    .label { font-family:Arial; font-size:16px; }
+    .dim { font-family:Arial; font-size:14px; font-style:italic; }
+    .title { font-family:Arial; font-size:22px; font-weight:bold; }</style>
+  <g id="iso_front_left" transform="translate(900,900)" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="iso_front_left" shapeType="g" aria-label="iso front left" ariaLabel="iso front left" tabindex="-1">
+    <text x="0" y="0" class="title" id="iso_front_left_title" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="iso_front_left_title" shapeType="text" aria-label="iso_front_left_title" ariaLabel="iso_front_left_title" tabindex="-1">Isometric Front-Left</text>
+    <polygon class="panel" points="180,0 320,70 140,110 0,40 " id="iso_front_left_top_panel" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="iso_front_left_top_panel" shapeType="polygon" aria-label="iso_front_left_top_panel" ariaLabel="iso_front_left_top_panel" tabindex="-1" />
+    <polygon class="panel" points="320,230 140,270 140,110 320,70 " id="iso_front_left_front_face" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="iso_front_left_front_face" shapeType="polygon" aria-label="iso_front_left_front_face" ariaLabel="iso_front_left_front_face" tabindex="-1" />
+    <polygon class="panel" points="320,70 320,90 180,20 180,0 " id="iso_front_left_side_face" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="iso_front_left_side_face" shapeType="polygon" aria-label="iso_front_left_side_face" ariaLabel="iso_front_left_side_face" tabindex="-1" />
+  </g>
+</svg>

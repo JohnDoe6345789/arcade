@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="10.0 14.0 524.0 52.0" width="524.0mm" height="52.0mm" id="text1_svg">
+  <style>.panel { fill:none; stroke:black; stroke-width:1; }
+    .label { font-family:Arial; font-size:16px; }
+    .dim { font-family:Arial; font-size:14px; font-style:italic; }
+    .title { font-family:Arial; font-size:22px; font-weight:bold; }</style>
+  <text x="20" y="40" class="title" id="text1" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="annotation" role="text1" shapeType="text" aria-label="text1" ariaLabel="text1" tabindex="-1">Arcade Cabinet Panel Footprints (All dimensions in millimeters)</text>
+</svg>
