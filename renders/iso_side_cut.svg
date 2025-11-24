@@ -3,7 +3,9 @@
   <style>.panel { fill:none; stroke:black; stroke-width:1; }
     .label { font-family:Arial; font-size:16px; }
     .dim { font-family:Arial; font-size:14px; font-style:italic; }
-    .title { font-family:Arial; font-size:22px; font-weight:bold; }</style>
+    .title { font-family:Arial; font-size:22px; font-weight:bold; }
+.label, .dim, .title { fill: #111; stroke: none; }
+</style>
   <g id="iso_side_cut" transform="translate(1600,900)" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="iso_side_cut" shapeType="g" aria-label="iso side cut" ariaLabel="iso side cut" tabindex="-1">
     <text x="0" y="0" class="title" id="iso_side_cut_title" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="iso_side_cut_title" shapeType="text" aria-label="iso_side_cut_title" ariaLabel="iso_side_cut_title" tabindex="-1">Side-Cut See-Through</text>
     <polygon class="panel" points="220,-40 400,40 180,80 0,0 " id="iso_side_cut_upper_shell" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="iso_side_cut_upper_shell" shapeType="polygon" aria-label="iso_side_cut_upper_shell" ariaLabel="iso_side_cut_upper_shell" tabindex="-1" />

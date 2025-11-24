@@ -3,7 +3,9 @@
   <style>.panel { fill:none; stroke:black; stroke-width:1; }
     .label { font-family:Arial; font-size:16px; }
     .dim { font-family:Arial; font-size:14px; font-style:italic; }
-    .title { font-family:Arial; font-size:22px; font-weight:bold; }</style>
+    .title { font-family:Arial; font-size:22px; font-weight:bold; }
+.label, .dim, .title { fill: #111; stroke: none; }
+</style>
   <g id="iso_rear_right" transform="translate(1250,1200)" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="iso_rear_right" shapeType="g" aria-label="iso rear right" ariaLabel="iso rear right" tabindex="-1">
     <text x="0" y="0" class="title" id="iso_rear_right_title" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="iso_rear_right_title" shapeType="text" aria-label="iso_rear_right_title" ariaLabel="iso_rear_right_title" tabindex="-1">Isometric Rear-Right</text>
     <polygon class="panel" points="-180,0 -320,70 -140,110 0,40 " id="iso_rear_right_side_panel" descriptionVerbose="Enriched SVG element or container of type 'unknown'." notes="All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only." category="diagram" role="iso_rear_right_side_panel" shapeType="polygon" aria-label="iso_rear_right_side_panel" ariaLabel="iso_rear_right_side_panel" tabindex="-1" />
