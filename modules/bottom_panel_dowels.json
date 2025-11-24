@@ -35,24 +35,24 @@
     },
     {
       "tag": "{http://www.w3.org/2000/svg}text",
-      "id": "text25",
+      "id": "bottom_panel_label",
       "attrib": {
         "x": "10",
         "y": "20",
         "class": "label",
-        "id": "text25",
+        "id": "bottom_panel_label",
         "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
         "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
       },
       "text": "Bottom Panel with Chungus Dowels",
       "children": [],
-      "descriptionVerbose": "text element with role 'text25', representing text label node containing the string \u201cBottom Panel with Chungus Dowels\u201d.",
-      "notes": "This text node lives in module 'bottom_panel_dowels' and was semantically classified using id='text25', category='panel', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "descriptionVerbose": "text element with role 'bottom_panel_label', representing text label node containing the string \u201cBottom Panel with Chungus Dowels\u201d.",
+      "notes": "This text node lives in module 'bottom_panel_dowels' and was semantically classified using id='bottom_panel_label', category='panel', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
       "shapeType": "text",
       "category": "panel",
-      "role": "text25",
-      "aria-label": "text25",
-      "ariaLabel": "text25",
+      "role": "bottom_panel_label",
+      "aria-label": "bottom_panel_label",
+      "ariaLabel": "bottom_panel_label",
       "tabindex": -1
     },
     {
@@ -148,7 +148,7 @@
       "id": "forward_extension_upper_dowel",
       "attrib": {
         "class": "panel",
-        "cx": "700",
+        "cx": "560",
         "cy": "100",
         "r": "5",
         "id": "forward_extension_upper_dowel",
@@ -170,7 +170,7 @@
       "id": "forward_extension_lower_dowel",
       "attrib": {
         "class": "panel",
-        "cx": "700",
+        "cx": "560",
         "cy": "300",
         "r": "5",
         "id": "forward_extension_lower_dowel",

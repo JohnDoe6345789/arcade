@@ -35,24 +35,24 @@
     },
     {
       "tag": "{http://www.w3.org/2000/svg}text",
-      "id": "text2",
+      "id": "motherboard_tray_label",
       "attrib": {
         "x": "10",
         "y": "20",
         "class": "label",
-        "id": "text2",
+        "id": "motherboard_tray_label",
         "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
         "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
       },
       "text": "Motherboard Tray (405 mm \u00d7 344 mm)",
       "children": [],
-      "descriptionVerbose": "text element with role 'text2', representing text label node containing the string \u201cMotherboard Tray (405 mm \u00d7 344 mm)\u201d.",
-      "notes": "This text node lives in module 'motherboard_tray' and was semantically classified using id='text2', category='panel', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "descriptionVerbose": "text element with role 'motherboard_tray_label', representing text label node containing the string \u201cMotherboard Tray (405 mm \u00d7 344 mm)\u201d.",
+      "notes": "This text node lives in module 'motherboard_tray' and was semantically classified using id='motherboard_tray_label', category='panel', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
       "shapeType": "text",
       "category": "panel",
-      "role": "text2",
-      "aria-label": "text2",
-      "ariaLabel": "text2",
+      "role": "motherboard_tray_label",
+      "aria-label": "motherboard_tray_label",
+      "ariaLabel": "motherboard_tray_label",
       "tabindex": -1
     },
     {
@@ -82,24 +82,24 @@
     },
     {
       "tag": "{http://www.w3.org/2000/svg}text",
-      "id": "text3",
+      "id": "cpu_backplate_label",
       "attrib": {
         "x": "115",
         "y": "98",
         "class": "dim",
-        "id": "text3",
+        "id": "cpu_backplate_label",
         "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
         "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
       },
       "text": "CPU Backplate Cutout (180\u00d7140 mm)",
       "children": [],
-      "descriptionVerbose": "text element with role 'text3', representing text label node containing the string \u201cCPU Backplate Cutout (180\u00d7140 mm)\u201d.",
-      "notes": "This text node lives in module 'motherboard_tray' and was semantically classified using id='text3', category='panel', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "descriptionVerbose": "text element with role 'cpu_backplate_label', representing text label node containing the string \u201cCPU Backplate Cutout (180\u00d7140 mm)\u201d.",
+      "notes": "This text node lives in module 'motherboard_tray' and was semantically classified using id='cpu_backplate_label', category='panel', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
       "shapeType": "text",
       "category": "panel",
-      "role": "text3",
-      "aria-label": "text3",
-      "ariaLabel": "text3",
+      "role": "cpu_backplate_label",
+      "aria-label": "cpu_backplate_label",
+      "ariaLabel": "cpu_backplate_label",
       "tabindex": -1
     },
     {
