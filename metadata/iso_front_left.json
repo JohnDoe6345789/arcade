@@ -1,0 +1,102 @@
+{
+  "tag": "{http://www.w3.org/2000/svg}g",
+  "id": "iso_front_left",
+  "attrib": {
+    "id": "iso_front_left",
+    "transform": "translate(900,900)",
+    "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+    "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+  },
+  "children": [
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "iso_front_left_title",
+      "attrib": {
+        "x": "0",
+        "y": "0",
+        "class": "title",
+        "id": "iso_front_left_title",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "Isometric Front-Left",
+      "children": [],
+      "descriptionVerbose": "text element with role 'iso_front_left_title', representing linework belonging to an isometric view of the cabinet.",
+      "notes": "This text node lives in module 'iso_front_left' and was semantically classified using id='iso_front_left_title', category='diagram', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "diagram",
+      "role": "iso_front_left_title",
+      "aria-label": "iso_front_left_title",
+      "ariaLabel": "iso_front_left_title",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}polygon",
+      "id": "iso_front_left_top_panel",
+      "attrib": {
+        "class": "panel",
+        "points": "180,0 320,70 140,110 0,40 ",
+        "id": "iso_front_left_top_panel",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [],
+      "descriptionVerbose": "polygon element with role 'iso_front_left_top_panel', representing linework belonging to an isometric view of the cabinet.",
+      "notes": "This polygon node lives in module 'iso_front_left' and was semantically classified using id='iso_front_left_top_panel', category='diagram', shapeType='polygon'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "polygon",
+      "category": "diagram",
+      "role": "iso_front_left_top_panel",
+      "aria-label": "iso_front_left_top_panel",
+      "ariaLabel": "iso_front_left_top_panel",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}polygon",
+      "id": "iso_front_left_front_face",
+      "attrib": {
+        "class": "panel",
+        "points": "320,230 140,270 140,110 320,70 ",
+        "id": "iso_front_left_front_face",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [],
+      "descriptionVerbose": "polygon element with role 'iso_front_left_front_face', representing linework belonging to an isometric view of the cabinet.",
+      "notes": "This polygon node lives in module 'iso_front_left' and was semantically classified using id='iso_front_left_front_face', category='diagram', shapeType='polygon'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "polygon",
+      "category": "diagram",
+      "role": "iso_front_left_front_face",
+      "aria-label": "iso_front_left_front_face",
+      "ariaLabel": "iso_front_left_front_face",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}polygon",
+      "id": "iso_front_left_side_face",
+      "attrib": {
+        "class": "panel",
+        "points": "320,70 320,90 180,20 180,0 ",
+        "id": "iso_front_left_side_face",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [],
+      "descriptionVerbose": "polygon element with role 'iso_front_left_side_face', representing linework belonging to an isometric view of the cabinet.",
+      "notes": "This polygon node lives in module 'iso_front_left' and was semantically classified using id='iso_front_left_side_face', category='diagram', shapeType='polygon'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "polygon",
+      "category": "diagram",
+      "role": "iso_front_left_side_face",
+      "aria-label": "iso_front_left_side_face",
+      "ariaLabel": "iso_front_left_side_face",
+      "tabindex": -1
+    }
+  ],
+  "descriptionVerbose": "g element with role 'iso_front_left', representing linework belonging to an isometric view of the cabinet.",
+  "notes": "This g node lives in module 'iso_front_left' and was semantically classified using id='iso_front_left', category='diagram', shapeType='g'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+  "shapeType": "g",
+  "category": "diagram",
+  "role": "iso_front_left",
+  "aria-label": "iso front left",
+  "ariaLabel": "iso front left",
+  "tabindex": -1
+}

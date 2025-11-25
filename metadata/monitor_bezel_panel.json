@@ -1,0 +1,158 @@
+{
+  "tag": "{http://www.w3.org/2000/svg}g",
+  "id": "monitor_bezel_panel",
+  "attrib": {
+    "id": "monitor_bezel_panel",
+    "transform": "translate(20,1350)",
+    "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+    "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+  },
+  "children": [
+    {
+      "tag": "{http://www.w3.org/2000/svg}rect",
+      "id": "bezel_outer_perimeter",
+      "attrib": {
+        "class": "panel",
+        "x": "0",
+        "y": "0",
+        "width": "620",
+        "height": "420",
+        "rx": "5",
+        "ry": "5",
+        "id": "bezel_outer_perimeter",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [],
+      "descriptionVerbose": "rect element with role 'bezel_outer_perimeter', representing rectangular outline of the monitor bezel panel.",
+      "notes": "This rect node lives in module 'monitor_bezel_panel' and was semantically classified using id='bezel_outer_perimeter', category='panel', shapeType='rect'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "rect",
+      "category": "panel",
+      "role": "bezel_outer_perimeter",
+      "aria-label": "bezel_outer_perimeter",
+      "ariaLabel": "bezel_outer_perimeter",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text96",
+      "attrib": {
+        "x": "10",
+        "y": "20",
+        "class": "label",
+        "id": "text96",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "Monitor Bezel Panel (22\u201324\" LCD, landscape)",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text96', representing text label node containing the string \u201cMonitor Bezel Panel (22\u201324\" LCD, landsca\u201d.",
+      "notes": "This text node lives in module 'monitor_bezel_panel' and was semantically classified using id='text96', category='panel', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "panel",
+      "role": "text96",
+      "aria-label": "text96",
+      "ariaLabel": "text96",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text97",
+      "attrib": {
+        "x": "10",
+        "y": "40",
+        "class": "dim",
+        "id": "text97",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "Outer panel: 620 mm (W) \u00d7 420 mm (H)",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text97', representing text label node containing the string \u201cOuter panel: 620 mm (W) \u00d7 420 mm (H)\u201d.",
+      "notes": "This text node lives in module 'monitor_bezel_panel' and was semantically classified using id='text97', category='panel', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "panel",
+      "role": "text97",
+      "aria-label": "text97",
+      "ariaLabel": "text97",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}rect",
+      "id": "bezel_viewing_window",
+      "attrib": {
+        "class": "panel",
+        "x": "30",
+        "y": "50",
+        "width": "560",
+        "height": "320",
+        "rx": "3",
+        "ry": "3",
+        "id": "bezel_viewing_window",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [],
+      "descriptionVerbose": "rect element with role 'bezel_viewing_window', representing rectangular outline of the monitor bezel panel.",
+      "notes": "This rect node lives in module 'monitor_bezel_panel' and was semantically classified using id='bezel_viewing_window', category='panel', shapeType='rect'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "rect",
+      "category": "panel",
+      "role": "bezel_viewing_window",
+      "aria-label": "bezel_viewing_window",
+      "ariaLabel": "bezel_viewing_window",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text98",
+      "attrib": {
+        "x": "30",
+        "y": "390",
+        "class": "dim",
+        "id": "text98",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "Viewing window: 560 mm (W) \u00d7 320 mm (H)",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text98', representing text label node containing the string \u201cViewing window: 560 mm (W) \u00d7 320 mm (H)\u201d.",
+      "notes": "This text node lives in module 'monitor_bezel_panel' and was semantically classified using id='text98', category='panel', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "panel",
+      "role": "text98",
+      "aria-label": "text98",
+      "ariaLabel": "text98",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text99",
+      "attrib": {
+        "x": "30",
+        "y": "410",
+        "class": "dim",
+        "id": "text99",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "Suitable for most 22\u201324\" 16:9 monitors (hidden bezel)",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text99', representing text label node containing the string \u201cSuitable for most 22\u201324\" 16:9 monitors (\u201d.",
+      "notes": "This text node lives in module 'monitor_bezel_panel' and was semantically classified using id='text99', category='panel', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "panel",
+      "role": "text99",
+      "aria-label": "text99",
+      "ariaLabel": "text99",
+      "tabindex": -1
+    }
+  ],
+  "descriptionVerbose": "g element with role 'monitor_bezel_panel', representing part of the monitor bezel panel surrounding the screen.",
+  "notes": "This g node lives in module 'monitor_bezel_panel' and was semantically classified using id='monitor_bezel_panel', category='panel', shapeType='g'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+  "shapeType": "g",
+  "category": "panel",
+  "role": "monitor_bezel_panel",
+  "aria-label": "monitor bezel panel",
+  "ariaLabel": "monitor bezel panel",
+  "tabindex": -1
+}

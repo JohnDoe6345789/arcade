@@ -1,0 +1,197 @@
+{
+  "tag": "{http://www.w3.org/2000/svg}g",
+  "id": "pi5_side_module",
+  "attrib": {
+    "id": "pi5_side_module",
+    "transform": "translate(700,1100)",
+    "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+    "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+  },
+  "children": [
+    {
+      "tag": "{http://www.w3.org/2000/svg}rect",
+      "id": "pi5_side_panel_outline",
+      "attrib": {
+        "class": "panel",
+        "x": "0",
+        "y": "0",
+        "width": "140",
+        "height": "100",
+        "rx": "5",
+        "ry": "5",
+        "id": "pi5_side_panel_outline",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [],
+      "descriptionVerbose": "rect element with role 'pi5_side_panel_outline', representing module rect element inside module 'pi5_side_module'.",
+      "notes": "This rect node lives in module 'pi5_side_module' and was semantically classified using id='pi5_side_panel_outline', category='module', shapeType='rect'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "rect",
+      "category": "module",
+      "role": "pi5_side_panel_outline",
+      "aria-label": "pi5_side_panel_outline",
+      "ariaLabel": "pi5_side_panel_outline",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text92",
+      "attrib": {
+        "x": "10",
+        "y": "20",
+        "class": "label",
+        "id": "text92",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "Raspberry Pi 5 Side Module",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text92', representing text label node containing the string \u201cRaspberry Pi 5 Side Module\u201d.",
+      "notes": "This text node lives in module 'pi5_side_module' and was semantically classified using id='text92', category='module', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "module",
+      "role": "text92",
+      "aria-label": "text92",
+      "ariaLabel": "text92",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}text",
+      "id": "text93",
+      "attrib": {
+        "x": "10",
+        "y": "40",
+        "class": "dim",
+        "id": "text93",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "text": "58 \u00d7 48 mm mount, 2.9 mm holes",
+      "children": [],
+      "descriptionVerbose": "text element with role 'text93', representing text label node containing the string \u201c58 \u00d7 48 mm mount, 2.9 mm holes\u201d.",
+      "notes": "This text node lives in module 'pi5_side_module' and was semantically classified using id='text93', category='module', shapeType='text'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "text",
+      "category": "module",
+      "role": "text93",
+      "aria-label": "text93",
+      "ariaLabel": "text93",
+      "tabindex": -1
+    },
+    {
+      "tag": "{http://www.w3.org/2000/svg}g",
+      "id": "fan_mount_hole_group",
+      "attrib": {
+        "transform": "translate(20,50)",
+        "id": "fan_mount_hole_group",
+        "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+        "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+      },
+      "children": [
+        {
+          "tag": "{http://www.w3.org/2000/svg}circle",
+          "id": "fan_mount_top_left",
+          "attrib": {
+            "class": "panel",
+            "cx": "0",
+            "cy": "0",
+            "r": "1.45",
+            "id": "fan_mount_top_left",
+            "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+            "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+          },
+          "children": [],
+          "descriptionVerbose": "circle element with role 'fan_mount_top_left', representing module circle element inside module 'pi5_side_module'.",
+          "notes": "This circle node lives in module 'pi5_side_module' and was semantically classified using id='fan_mount_top_left', category='module', shapeType='circle'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+          "shapeType": "circle",
+          "category": "module",
+          "role": "fan_mount_top_left",
+          "aria-label": "fan_mount_top_left",
+          "ariaLabel": "fan_mount_top_left",
+          "tabindex": -1
+        },
+        {
+          "tag": "{http://www.w3.org/2000/svg}circle",
+          "id": "fan_mount_top_right",
+          "attrib": {
+            "class": "panel",
+            "cx": "58",
+            "cy": "0",
+            "r": "1.45",
+            "id": "fan_mount_top_right",
+            "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+            "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+          },
+          "children": [],
+          "descriptionVerbose": "circle element with role 'fan_mount_top_right', representing module circle element inside module 'pi5_side_module'.",
+          "notes": "This circle node lives in module 'pi5_side_module' and was semantically classified using id='fan_mount_top_right', category='module', shapeType='circle'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+          "shapeType": "circle",
+          "category": "module",
+          "role": "fan_mount_top_right",
+          "aria-label": "fan_mount_top_right",
+          "ariaLabel": "fan_mount_top_right",
+          "tabindex": -1
+        },
+        {
+          "tag": "{http://www.w3.org/2000/svg}circle",
+          "id": "fan_mount_bottom_left",
+          "attrib": {
+            "class": "panel",
+            "cx": "0",
+            "cy": "48",
+            "r": "1.45",
+            "id": "fan_mount_bottom_left",
+            "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+            "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+          },
+          "children": [],
+          "descriptionVerbose": "circle element with role 'fan_mount_bottom_left', representing module circle element inside module 'pi5_side_module'.",
+          "notes": "This circle node lives in module 'pi5_side_module' and was semantically classified using id='fan_mount_bottom_left', category='module', shapeType='circle'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+          "shapeType": "circle",
+          "category": "module",
+          "role": "fan_mount_bottom_left",
+          "aria-label": "fan_mount_bottom_left",
+          "ariaLabel": "fan_mount_bottom_left",
+          "tabindex": -1
+        },
+        {
+          "tag": "{http://www.w3.org/2000/svg}circle",
+          "id": "fan_mount_bottom_right",
+          "attrib": {
+            "class": "panel",
+            "cx": "58",
+            "cy": "48",
+            "r": "1.45",
+            "id": "fan_mount_bottom_right",
+            "descriptionVerbose": "Enriched SVG element or container of type 'unknown'.",
+            "notes": "All attributes and structure preserved exactly from original SVG; enrichment adds documentation fields only."
+          },
+          "children": [],
+          "descriptionVerbose": "circle element with role 'fan_mount_bottom_right', representing module circle element inside module 'pi5_side_module'.",
+          "notes": "This circle node lives in module 'pi5_side_module' and was semantically classified using id='fan_mount_bottom_right', category='module', shapeType='circle'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+          "shapeType": "circle",
+          "category": "module",
+          "role": "fan_mount_bottom_right",
+          "aria-label": "fan_mount_bottom_right",
+          "ariaLabel": "fan_mount_bottom_right",
+          "tabindex": -1
+        }
+      ],
+      "descriptionVerbose": "g element with role 'fan_mount_hole_group', representing module g element inside module 'pi5_side_module'.",
+      "notes": "This g node lives in module 'pi5_side_module' and was semantically classified using id='fan_mount_hole_group', category='module', shapeType='g'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+      "shapeType": "g",
+      "category": "module",
+      "role": "fan_mount_hole_group",
+      "aria-label": "fan_mount_hole_group",
+      "ariaLabel": "fan_mount_hole_group",
+      "tabindex": -1
+    }
+  ],
+  "descriptionVerbose": "g element with role 'pi5_side_module', representing mounting feature for the Raspberry Pi 5 side module.",
+  "notes": "This g node lives in module 'pi5_side_module' and was semantically classified using id='pi5_side_module', category='module', shapeType='g'. Geometry and raw attributes are taken directly from the original SVG; only descriptive metadata (descriptionVerbose, notes, category, role, shapeType, aria-label) has been added to make the element self-explanatory for downstream tools or viewers.",
+  "shapeType": "g",
+  "category": "module",
+  "role": "pi5_side_module",
+  "aria-label": "pi5 side module",
+  "ariaLabel": "pi5 side module",
+  "tabindex": -1
+}
